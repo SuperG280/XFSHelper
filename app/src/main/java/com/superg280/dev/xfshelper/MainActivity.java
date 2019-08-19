@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Snackbar.make(getWindow().getDecorView().getRootView(), "Pulsando settings", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
             return true;
         }
 
