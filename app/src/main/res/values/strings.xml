@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">XFSHelper</string>
+    <string name="action_settings">Settings</string>
+	<string name="main_label_find">Código XFS</string>
+    <string name="main_label_help_line1">Valores positivos para comandos/eventos</string>
+    <string name="main_label_help_line2">Valores negativos para errores</string>
+    <string name="main_label_result">Resultado</string>
+    <string name="main_switch_execute">Exec</string>
+    <string name="main_switch_getinfo">Info</string>
+</resources>
