@@ -1,5 +1,6 @@
 package com.superg280.dev.xfshelper;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -70,8 +71,12 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Snackbar.make(getWindow().getDecorView().getRootView(), "Pulsando settings", Snackbar.LENGTH_LONG)
+            /*Snackbar.make(getWindow().getDecorView().getRootView(), "Pulsando settings", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
+            */
+
+            Intent inte = new Intent(MainActivity.this, DevicesActivity.class);
+            startActivity(inte);
             return true;
         }
 
