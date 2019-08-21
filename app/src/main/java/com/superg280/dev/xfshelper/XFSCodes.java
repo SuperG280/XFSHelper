@@ -1,5 +1,7 @@
 package com.superg280.dev.xfshelper;
 
+import java.util.ArrayList;
+
 public class XFSCodes {
 
 
@@ -2176,5 +2178,171 @@ public class XFSCodes {
         }
 
         return element;
+    }
+
+    public static ArrayList<XFSDeviceCode> getDispenserData() {
+
+        ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
+
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMCAPS.wClass"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tWFS_SERVICE_CLASS_CDM"	, "3"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMSTATUS.fwDevice"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVOFFLINE"			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVPOWEROFF"			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVNODEVICE"			, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVHWERROR"			, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVUSERERROR"		, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVBUSY"				, "6"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVFRAUDATTEMPT"		, "7"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVPOTENTIALFRAUD"	, "8"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMSTATUS.fwSafeDoor"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDOORNOTSUPPORTED"	, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDOOROPEN"			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDOORCLOSED"			, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tDOORUNKNOWN"			, "5"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMSTATUS.fwDispenser"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDISPOK"				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDISPCUSTATE"			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDISPCUSTOP"			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDISPCUUNKNOWN"		, "3"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMSTATUS.fwIntermediateStacker"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tISEMPTY"						, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tISNOTEMPTY"					, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tISNOTEMPTYCUST"				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tISNOTEMPTYUNK"				, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tISUNKNOWN"					, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tISNOTSUPPORTED"				, "5"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMSTATUS.wDevicePosition"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMDEVICEPOSITION.wPosition", ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEINPOSITION"	, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICENOTINPOSITION"	, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEPOSUNKNOWN"	, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEPOSNOTSUPP"	, "3"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMOUTPOS.fwShutter"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tSHTCLOSED"		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHTOPEN"			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHTJAMMED"		, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHTUNKNOWN"		, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHTNOTSUPPORTED"	, "4"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMOUTPOS.fwPositionStatus"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tPSEMPTY"				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tPSNOTEMPTY"			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tPSUNKNOWN"			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tPSNOTSUPPORTED"		, "3"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMOUTPOS.fwTransport"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tTPOK"			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tTPINOP"			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tTPUNKNOWN"		, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tTPNOTSUPPORTED"	, "3"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMOUTPOS.fwTransportStatus", ""));
+        deviceCodes.add( new XFSDeviceCode( "\tTPSTATEMPTY"			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tTPSTATNOTEMPTY"		, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tTPSTATNOTEMPTYCUST"	, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tTPSTATNOTEMPTY_UNK"	, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tTPSTATNOTSUPPORTED"	, "4"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMOUTPOS.fwJammedShutterPosition"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tSHUTTERPOS_NOTSUPPORTED"		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHUTTERPOS_NOTJAMMED"		, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHUTTERPOS_OPEN"				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHUTTERPOS_PARTIALLY_OPEN"	, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHUTTERPOS_CLOSED"			, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHUTTERPOS_UNKNOWN"			, "5"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMCAPS.fwType"						, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tTELLERBILL"					, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tSELFSERVICEBILL"				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tTELLERCOIN"					, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tSELFSERVICECOIN"				, "3"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMCAPS.fwRetractAreas"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMRETRACT.usRetractArea"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tRA_RETRACT"					, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tRA_TRANSPORT"				, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tRA_STACKER"					, "0x04"));
+        deviceCodes.add( new XFSDeviceCode( "\tRA_REJECT"					, "0x08"));
+        deviceCodes.add( new XFSDeviceCode( "\tRA_NOTSUPP"					, "0x10"));
+        deviceCodes.add( new XFSDeviceCode( "\tRA_ITEMCASSETTE"				, "0x20"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMCAPS.fwRetractTransportActions"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMCAPS.fwRetractStackerActions"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tPRESENT"						, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tRETRACT"						, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tREJECT"						, "0x04"));
+        deviceCodes.add( new XFSDeviceCode( "\tNOTSUPP"						, "0x08"));
+        deviceCodes.add( new XFSDeviceCode( "\tITEMCASSETTE"				, "0x10"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMCAPS.fwMoveItems"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tFROMCU"						, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tTOCU"						, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tTOTRANSPORT"					, "0x04"));
+        deviceCodes.add( new XFSDeviceCode( "\tTOSTACKER"					, "0x08"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMCASHUNIT.usType"					, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPENA"						, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPEREJECTCASSETTE"			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPEBILLCASSETTE"			, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPECOINCYLINDER"			, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPECOINDISPENSER"			, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPERETRACTCASSETTE"			, "6"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPECOUPON"					, "7"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPEDOCUMENT"				, "8"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPEREPCONTAINER"			, "11"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPERECYCLING"				, "12"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMCASHUNIT.usStatus"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tSTATCUOK"					, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tSTATCUFULL"					, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tSTATCUHIGH"					, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tSTATCULOW"					, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tSTATCUEMPTY"					, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tSTATCUINOP"					, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tSTATCUMISSING"				, "6"));
+        deviceCodes.add( new XFSDeviceCode( "\tSTATCUNOVAL"					, "7"));
+        deviceCodes.add( new XFSDeviceCode( "\tSTATCUNOREF"					, "8"));
+        deviceCodes.add( new XFSDeviceCode( "\tSTATCUMANIP"					, "9"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMMIXTYPE.usMixType"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tMIXALGORITHM"				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tMIXTABLE"					, "2"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMMIXTYPE.usMixNumber"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tINDIVIDUAL"					, "0"));
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( "WFSCDMMIXTYPE.usSubType"					, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tMIX_MINIMUM_NUMBER_OF_BILLS"		, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tMIX_EQUAL_EMPTYING_OF_CASH_UNITS", "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tMIX_MAXIMUM_NUMBER_OF_CASH_UNITS", "3"));
+
+        return deviceCodes;
     }
 }

@@ -1,13 +1,19 @@
 package com.superg280.dev.xfshelper;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 public class DevicesActivity extends AppCompatActivity {
+
+    private AdapterDeviceItem adapterDevice = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,37 @@ public class DevicesActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id) {
 
+                ArrayList<XFSDeviceCode> items = null;
+
+                switch ( pos) {
+                    case Devices.DEV_MANAGER:
+
+                        break;
+                    case Devices.DEV_DISPENSER:
+                        items = XFSCodes.getDispenserData();
+                        break;
+                    case Devices.DEV_CARD:
+
+                        break;
+                    case Devices.DEV_PINPAD:
+
+                        break;
+                    case Devices.DEV_SENSORS:
+
+                        break;
+                }
+
+                if( items == null || items.isEmpty()) {
+                    if (adapterDevice != null) {
+                        adapterDevice.clear();
+                        adapterDevice.notifyDataSetChanged();
+                        return;
+                    }
+                }
+
+                ListView lv = findViewById( R.id.listView_device_items);
+                adapterDevice = new AdapterDeviceItem( getApplicationContext(), items);
+                lv.setAdapter(adapterDevice);
             }
 
             @Override
