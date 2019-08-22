@@ -35,19 +35,19 @@ public class DevicesActivity extends AppCompatActivity {
 
                 switch ( pos) {
                     case Devices.DEV_MANAGER:
-
+                        items = XFSCodes.getManagerData(getApplicationContext());
                         break;
                     case Devices.DEV_DISPENSER:
                         items = XFSCodes.getDispenserData();
                         break;
                     case Devices.DEV_CARD:
-
+                        items = XFSCodes.getCardReaderData();
                         break;
                     case Devices.DEV_PINPAD:
-
+                        items = XFSCodes.getPinPadData();
                         break;
                     case Devices.DEV_SENSORS:
-
+                        items = XFSCodes.getSensorsData(getApplicationContext());
                         break;
                 }
 

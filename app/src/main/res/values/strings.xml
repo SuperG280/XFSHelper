@@ -8,4 +8,13 @@
     <string name="main_switch_execute">Exec</string>
     <string name="main_switch_getinfo">Info</string>
     <string name="devices_select_label">Dispositivo</string>
+    <string name="devices_sensors_arrays_size">Tamaño de arrays</string>
+    <string name="devices_sensors_indices_of">Indices de</string>
+    <string name="devices_sensors_values_of">Valores para</string>
+    <string name="devices_sensors_flags_for">Flags para</string>
+    <string name="devices_all_evento">Evento: "</string>
+    <string name="devices_manager_messages">Eventos Complete de funciones asíncronas</string>
+    <string name="devices_manager_event_classes">Clases de eventos</string>
+    <string name="devices_manager_trace_level">Niveles de traza</string>
+    <string name="devices_manager_error_actions">Acciones de error</string>
 </resources>

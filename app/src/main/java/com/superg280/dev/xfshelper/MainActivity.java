@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         if( nCode <= 0) {
             element = XFSCodes.getXFSError( nCode);
         } else {
-            element = XFSCodes.getXFSCommandResult( nCode, bExecute);
+            element = XFSCodes.getXFSCommandResult( nCode, bExecute, getApplicationContext());
         }
 
         TextView result = findViewById( R.id.textView_main_result_text);
