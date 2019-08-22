@@ -1,12 +1,18 @@
 <resources>
     <string name="app_name">XFSHelper</string>
-    <string name="action_devices">Dispositivos</string>
+    <string name="app_version">Ver. 1.0.0</string>
+    <string name="action_devices">Constantes de Dispositivos</string>
+    <string name="action_about">Acerca de</string>
     <string name="main_label_find">Código XFS</string>
-    <string name="main_label_help_line1">Valores positivos para comandos/eventos</string>
-    <string name="main_label_help_line2">Valores negativos para errores</string>
+    <string name="main_label_help_line1">Busca el nombre del valor numérico XFS</string>
+    <string name="main_label_help_line2">Valores positivos para comandos/eventos</string>
+    <string name="main_label_help_line3">Valores negativos para errores</string>
     <string name="main_label_result">Resultado</string>
     <string name="main_switch_execute">Exec</string>
     <string name="main_switch_getinfo">Info</string>
+    <string name="main_help_find1">dwCategory</string>
+    <string name="main_help_find2">dwCommand</string>
+    <string name="main_help_find3">hResult</string>
     <string name="devices_select_label">Dispositivo</string>
     <string name="devices_sensors_arrays_size">Tamaño de arrays</string>
     <string name="devices_sensors_indices_of">Indices de</string>
@@ -17,4 +23,6 @@
     <string name="devices_manager_event_classes">Clases de eventos</string>
     <string name="devices_manager_trace_level">Niveles de traza</string>
     <string name="devices_manager_error_actions">Acciones de error</string>
+    <string name="about_xfs_message">Versión XFS soportada: 3.30</string>
+    <string name="about_copyright">SuperG © 2019</string>
 </resources>

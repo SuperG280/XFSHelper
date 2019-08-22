@@ -78,7 +78,12 @@ public class MainActivity extends AppCompatActivity {
             Intent inte = new Intent(MainActivity.this, DevicesActivity.class);
             startActivity(inte);
             return true;
+        } else if( id == R.id.action_about) {
+            Intent inte = new Intent(MainActivity.this, AboutActivity.class);
+            startActivity(inte);
+            return true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }

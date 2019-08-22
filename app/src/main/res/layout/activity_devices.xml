@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="@string/devices_select_label"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/spinner_devices_select"
         app:layout_constraintStart_toStartOf="parent"
