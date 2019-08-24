@@ -1,11 +1,10 @@
 package com.superg280.dev.xfshelper;
 
-import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 import android.widget.Spinner;
 
@@ -20,6 +19,9 @@ public class DevicesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_devices);
 
+		Toolbar toolbar = findViewById(R.id.toolbar_devices);
+        setSupportActionBar(toolbar);
+		
         final Spinner spinnerDevices = findViewById( R.id.spinner_devices_select);
         DevicesSpinnerAdapter devicesAdapter = new DevicesSpinnerAdapter( getApplicationContext(), Devices.getDev_icons(), Devices.getDev_literales());
 
