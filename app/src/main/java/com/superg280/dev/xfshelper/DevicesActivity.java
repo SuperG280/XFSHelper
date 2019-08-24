@@ -49,6 +49,24 @@ public class DevicesActivity extends AppCompatActivity {
                     case Devices.DEV_SENSORS:
                         items = XFSCodes.getSensorsData(getApplicationContext());
                         break;
+                    case Devices.DEV_NOTESDEPOSIT:
+                        items = XFSCodes.getNoteAcceptorData();
+                        break;
+                    case Devices.DEV_PRINTER:
+                        //items = XFSCodes.getPrinterData();
+                        break;
+                    case Devices.DEV_VDM:
+                        //items = XFSCodes.getPrinterData();
+                        break;
+                    case Devices.DEV_TTU:
+                        //items = XFSCodes.getPrinterData();
+                        break;
+                    case Devices.DEV_BARCODE:
+                        //items = XFSCodes.getPrinterData();
+                        break;
+                    case Devices.DEV_DEPOSIT:
+                        //items = XFSCodes.getPrinterData();
+                        break;
                 }
 
                 if( items == null || items.isEmpty()) {

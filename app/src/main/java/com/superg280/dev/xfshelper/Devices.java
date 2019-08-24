@@ -2,25 +2,44 @@ package com.superg280.dev.xfshelper;
 
 public class Devices {
 
-    public final static int DEV_MANAGER = 0;
-    public final static int DEV_DISPENSER = 1;
-    public final static int DEV_CARD = 2;
-    public final static int DEV_PINPAD = 3;
-    public final static int DEV_SENSORS = 4;
+    public final static int DEV_MANAGER         = 0;
+    public final static int DEV_PRINTER         = 1;
+    public final static int DEV_CARD            = 2;
+    public final static int DEV_DISPENSER       = 3;
+    public final static int DEV_PINPAD          = 4;
+    public final static int DEV_SENSORS         = 5;
+    public final static int DEV_NOTESDEPOSIT    = 6;
+    public final static int DEV_TTU             = 7;
+    public final static int DEV_VDM             = 8;
+    public final static int DEV_DEPOSIT         = 9;
+    public final static int DEV_BARCODE         = 10;
+
     
 
-    private static final int dev_icons[] = { R.drawable.dev_manager,
-                                            R.drawable.dev_dispenser,
-                                            R.drawable.dev_card,
-                                            R.drawable.dev_pinpad,
-                                            R.drawable.dev_sensors};
+    private static final int dev_icons[] = {    R.drawable.dev_manager,
+                                                R.drawable.dev_printer,
+                                                R.drawable.dev_card,
+                                                R.drawable.dev_dispenser,
+                                                R.drawable.dev_pinpad,
+                                                R.drawable.dev_sensors,
+                                                R.drawable.dev_notesdeposit,
+                                                R.drawable.dev_ttu,
+                                                R.drawable.dev_vdm,
+                                                R.drawable.dev_deposit,
+                                                R.drawable.dev_barcode};
 
     
-    private static final String dev_literales[] = {  "Manager",
-                                                    "Dispensador",
-                                                    "Lector Tarjetas",
-                                                    "PinPad",
-                                                    "Sensores"};
+    private static final String dev_literales[] = {     "Manager",
+                                                        "Printer",
+                                                        "Card Reader",
+                                                        "Dispenser",
+                                                        "PinPad",
+                                                        "Sensors",
+                                                        "Notes deposit",
+                                                        "Operator panel",
+                                                        "Vendor mode",
+                                                        "Deposit",
+                                                        "Barcode"};
 
 
 
