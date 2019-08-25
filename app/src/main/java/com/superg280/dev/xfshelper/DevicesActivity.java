@@ -1,12 +1,16 @@
 package com.superg280.dev.xfshelper;
 
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -90,5 +94,57 @@ public class DevicesActivity extends AppCompatActivity {
 
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_devices, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_devices_add) {
+            boolean isSelected[] = adapterDevice.getSelectedFlags();
+
+            //String strResult = "";
+            int add = 0;
+
+            for( int i = 0; i < isSelected.length; i++) {
+                if( isSelected[i]) {
+                    XFSDeviceCode code = (XFSDeviceCode) adapterDevice.getItem(i);
+                    //strResult += code.getValue() + " ";
+                    try {
+                        add += Integer.parseInt(code.getValue().substring(2), 16);
+                    } catch( Exception ex) {
+                        add = 0;
+                    }
+                }
+            }
+            ListView lv = findViewById( R.id.listView_device_items);
+            String text = getResources().getString(R.string.devices_add_no_selection_text);
+            if( add > 0) {
+                text = String.format( "%s 0x%08X", getResources().getString(R.string.devices_add_result_text), add);
+            }
+
+            Snackbar.make(lv, text, Snackbar.LENGTH_INDEFINITE)
+                    .setActionTextColor(getResources().getColor(R.color.colorDeviceSelectedText))
+                    .setAction(getResources().getString(R.string.devices_add_result_close), new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            }).show();
+
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
