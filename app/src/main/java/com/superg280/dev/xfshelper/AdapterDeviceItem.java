@@ -21,6 +21,7 @@ public class AdapterDeviceItem extends BaseAdapter {
     private Context activity;
     private ArrayList<XFSDeviceCode> items = new ArrayList<>();
     private boolean isSelected[];
+    private Callback listener;
 
     private class ViewHolder {
         ConstraintLayout constraintLayout;
@@ -48,6 +49,10 @@ public class AdapterDeviceItem extends BaseAdapter {
 
         if( items != null)
             items.clear();
+    }
+
+    public void setListener(Callback listener)    {
+        this.listener = listener;
     }
 
     public void addAll(ArrayList<XFSDeviceCode> newItems) {
@@ -122,6 +127,10 @@ public class AdapterDeviceItem extends BaseAdapter {
                boolean flag = holder.textView.isSelected();
                holder.textView.setSelected(!flag);
                isSelected[position] = !isSelected[position];
+
+               if(listener!=null) {
+                   listener.onChangeInSelection();
+               }
 
                if(holder.textView.isSelected()){
                    holder.constraintLayout.setBackgroundColor(activity.getColor(R.color.colorDeviceSelected));

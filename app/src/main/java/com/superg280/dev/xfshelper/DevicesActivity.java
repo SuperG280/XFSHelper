@@ -14,9 +14,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class DevicesActivity extends AppCompatActivity {
+public class DevicesActivity extends AppCompatActivity implements Callback {
 
     private AdapterDeviceItem adapterDevice = null;
+    private boolean hideAddButton = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class DevicesActivity extends AppCompatActivity {
 
 		Toolbar toolbar = findViewById(R.id.toolbar_devices);
         setSupportActionBar(toolbar);
-		
+
         final Spinner spinnerDevices = findViewById( R.id.spinner_devices_select);
         DevicesSpinnerAdapter devicesAdapter = new DevicesSpinnerAdapter( getApplicationContext(), Devices.getDev_icons(), Devices.getDev_literales());
 
@@ -87,6 +88,7 @@ public class DevicesActivity extends AppCompatActivity {
                 adapterDevice = new AdapterDeviceItem( getApplicationContext(), items);
                 lv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
                 lv.setAdapter(adapterDevice);
+                adapterDevice.setListener( DevicesActivity.this);
             }
 
             @Override
@@ -95,10 +97,38 @@ public class DevicesActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void hideOrShowActionButton( ) {
+
+        boolean isSelected[] = adapterDevice.getSelectedFlags();
+        for( boolean b: isSelected) {
+            if( b) {
+                hideAddButton = false;
+                invalidateOptionsMenu();
+                return;
+            }
+        }
+        hideAddButton = true;
+        invalidateOptionsMenu();
+    }
+
+    @Override
+    public void onChangeInSelection()
+    {
+        hideOrShowActionButton( );
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_devices, menu);
+
+        MenuItem item = menu.findItem(R.id.action_devices_add);
+        if( hideAddButton)
+            item.setVisible(false);
+        else
+            item.setVisible(true);
+
         return true;
     }
 
@@ -130,7 +160,7 @@ public class DevicesActivity extends AppCompatActivity {
             ListView lv = findViewById( R.id.listView_device_items);
             String text = getResources().getString(R.string.devices_add_no_selection_text);
             if( add > 0) {
-                text = String.format( "%s 0x%08X", getResources().getString(R.string.devices_add_result_text), add);
+                text = String.format( "%s 0x%08X -- %d", getResources().getString(R.string.devices_add_result_text), add, add);
             }
 
             Snackbar.make(lv, text, Snackbar.LENGTH_INDEFINITE)
