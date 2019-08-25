@@ -81,6 +81,7 @@ public class DevicesActivity extends AppCompatActivity {
 
                 ListView lv = findViewById( R.id.listView_device_items);
                 adapterDevice = new AdapterDeviceItem( getApplicationContext(), items);
+                lv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
                 lv.setAdapter(adapterDevice);
             }
 

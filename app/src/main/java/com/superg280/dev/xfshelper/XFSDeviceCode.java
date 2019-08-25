@@ -28,7 +28,7 @@ public class XFSDeviceCode {
 		return Name;
 	}
 	
-	public String gerValue() {
+	public String getValue() {
 		return Value;
 	}
 

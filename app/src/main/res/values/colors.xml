@@ -9,4 +9,7 @@
 	<color name="pure_red">#FF0000</color>
     <color name="pure_blue">#0000FF</color>
     <color name="text_grey">#656566</color>
+    <color name="colorDeviceSelected">#5F6CB8</color>
+    <color name="colorDeviceSelectedText">#FFFFFF</color>
+    <color name="colorDeviceText">#000000</color>
 </resources>
