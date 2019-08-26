@@ -2976,7 +2976,7 @@ public class XFSCodes {
 		deviceCodes.add( new XFSDeviceCode( "\tWFS_SIU_GUIDLIGHTS_SIZE"	, "16"));
 		
 		deviceCodes.add( new XFSDeviceCode("", ""));
-		deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_sensors_indices_of), ""));
+		deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_generic_indices_of), ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUSTATUS.fwSensors[]"		, ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUCAPS.fwSensors[]"			, ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUENABLE.fwSensors[]"		, ""));
@@ -2999,7 +2999,7 @@ public class XFSCodes {
 		deviceCodes.add( new XFSDeviceCode( "\tFASCIAMICROPHONE"			    , "14"));
 		
 		deviceCodes.add( new XFSDeviceCode("", ""));
-		deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_sensors_indices_of), ""));
+		deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_generic_indices_of), ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUSTATUS.fwDoors[]"		    , ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUCAPS.fwDoors[]"			, ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUENABLE.fwDoors[]"		    , ""));
@@ -3016,7 +3016,7 @@ public class XFSCodes {
         deviceCodes.add( new XFSDeviceCode( "\tCABINET_RIGHT"				    , "6"));
 		
 		deviceCodes.add( new XFSDeviceCode("", ""));
-		deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_sensors_indices_of), ""));
+		deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_generic_indices_of), ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUSTATUS.fwIndicators[]"		, ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUCAPS.fwIndicators[]"		, ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUENABLE.fwIndicators[]"		, ""));
@@ -3034,7 +3034,7 @@ public class XFSCodes {
 		deviceCodes.add( new XFSDeviceCode( "\tGENERALOUTPUTPORT"				, "7"));
 		
 		deviceCodes.add( new XFSDeviceCode("", ""));
-		deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_sensors_indices_of), ""));
+		deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_generic_indices_of), ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUSTATUS.fwAuxiliaries[]"	, ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUCAPS.fwAuxiliaries[]"		, ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUENABLE.fwAuxiliaries[]"	, ""));
@@ -3051,7 +3051,7 @@ public class XFSCodes {
         deviceCodes.add( new XFSDeviceCode( "\tMICROPHONEVOLUME"				, "6"));
 		
         deviceCodes.add( new XFSDeviceCode("", ""));
-		deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_sensors_indices_of), ""));
+		deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_generic_indices_of), ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUSTATUS.fwGuidLights[]"		, ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUCAPS.fwGuidLights[]"		, ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUENABLE.fwGuidLights[]"		, ""));
@@ -3795,6 +3795,893 @@ public class XFSCodes {
 		deviceCodes.add( new XFSDeviceCode("WFSPINFK.wKeyType"			, ""));
 		deviceCodes.add( new XFSDeviceCode("\tFK"    					, "0x01"));
 		deviceCodes.add( new XFSDeviceCode("\tFDK"  					, "0x02"));
+		
+		return deviceCodes;
+	}
+	
+	public static ArrayList<XFSDeviceCode> getPrinterData( Context context) {
+		
+		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
+		
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.wClass"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_PTR"		, "1"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSTATUS.fwDevice"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVOFFLINE"			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVPOWEROFF"			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVNODEVICE"			, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVHWERROR"			, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVUSERERROR"		, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVBUSY"				, "6"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVFRAUDATTEMPT"		, "7"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVPOTENTIALFRAUD"	, "8"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSTATUS.fwMedia"			, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRMEDIADETECTED.wPosition"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIAPRESENT"				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIANOTPRESENT"				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIAJAMMED"   				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIANOTSUPP"  				, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIAUNKNOWN"  				, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIAENTERING" 				, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIARETRACTED"				, "6"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRMEDIADETECTED.wPosition"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIAEXPELLED"				, "7"));
+        
+      
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_generic_indices_of), ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSTATUS.fwPaper[]"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tSUPPLYUPPER"				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tSUPPLYLOWER"				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tSUPPLYEXTERNAL"			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tSUPPLYAUX"     			, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tSUPPLYAUX2"    			, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tSUPPLYPARK"    			, "5"));
+        
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSTATUS.fwPaper"			, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRPAPERTHRESHOLD.wPaperThreshold"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERFULL"   				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERLOW"					, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPEROUT"    				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERNOTSUPP"				, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERUNKNOWN"				, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERJAMMED" 				, "5"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSTATUS.fwToner"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tTONERFULL"    				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tTONERLOW"    				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tTONEROUT"     				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tTONERNOTSUPP"				, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tTONERUNKNOWN"				, "4"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSTATUS.fwInk"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tINKFULL"     				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tINKLOW"     					, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tINKOUT"      				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tINKNOTSUPP"					, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tINKUNKNOWN"					, "4"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSTATUS.fwLamp"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tLAMPOK"        				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tLAMPFADING"   				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tLAMPINOP"      				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tLAMPNOTSUPP"					, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tLAMPUNKNOWN"					, "4"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRRETRACTBINS.wRetractBin"		, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRBINTHRESHOLD.wRetractBin"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tRETRACTBINOK"      				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tRETRACTBINFULL"   				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tRETRACTNOTSUPP"    				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tRETRACTUNKNOWN"					, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tRETRACTBINHIGH"					, "4"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRRETRACTBINS.wRetractBin"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tRETRACTBINMISSING"      			, "5"));
+        
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSTATUS.wDevicePosition"		, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRDEVICEPOSITION.wPosition"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEINPOSITION"        		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICENOTINPOSITION"   			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEPOSUNKNOWN"    			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEPOSNOTSUPP"				, "3"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSTATUS.wPaperType"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERSINGLESIDED"      			, "0"));
+		deviceCodes.add( new XFSDeviceCode( "\tPAPERDUALSIDED"      			, "1"));
+		deviceCodes.add( new XFSDeviceCode( "\tPAPERTYPEUNKNOWN"      			, "2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSTATUS.wAntiFraudModule"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMNOTSUPP"            				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMOK"				   				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMINOP"			    				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMDEVICEDETECTED"					, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMUNKNOWN"							, "4"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwType"					, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPERECEIPT"       				, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPEPASSBOOK"	   				, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPEJOURNAL"     				, "0x04"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPEDOCUMENT"					, "0x08"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPESCANNER" 					, "0x10"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.wResolution"			, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRPRINTFORM.wResolution"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tRESLOW"            				, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tRESMED"	 		  				, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tRESHIGH"         				, "0x04"));
+        deviceCodes.add( new XFSDeviceCode( "\tRESVERYHIGH"						, "0x08"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwReadForm"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tREADOCR"             			, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tREADMICR"	   					, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tREADMSF"         				, "0x04"));
+        deviceCodes.add( new XFSDeviceCode( "\tREADBARCODE"						, "0x08"));
+        deviceCodes.add( new XFSDeviceCode( "\tREADPAGEMARK" 					, "0x10"));
+		deviceCodes.add( new XFSDeviceCode( "\tREADIMAGE"     					, "0x20"));
+		deviceCodes.add( new XFSDeviceCode( "\tREADEMPTYLINE" 					, "0x40"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwWriteForm"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tWRITETEXT"            			, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tWRITEGRAPHICS"  					, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tWRITEOCR"         				, "0x04"));
+        deviceCodes.add( new XFSDeviceCode( "\tWRITEMICR"    					, "0x08"));
+        deviceCodes.add( new XFSDeviceCode( "\tWRITEMSF"      					, "0x10"));
+		deviceCodes.add( new XFSDeviceCode( "\tWRITEBARCODE"   					, "0x20"));
+		deviceCodes.add( new XFSDeviceCode( "\tWRITESTAMP" 						, "0x40"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwExtents"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tEXTHORIZONTAL"         			, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tEXTVERTICAL"  					, "0x02"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwControl"				, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.dwControlEx"			, ""));
+		deviceCodes.add( new XFSDeviceCode( "dwMediaControl"					, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tCTRLEJECT"                    	, "0x0001"));
+        deviceCodes.add( new XFSDeviceCode( "\tCTRLPERFORATE"  					, "0x0002"));
+        deviceCodes.add( new XFSDeviceCode( "\tCTRLCUT"                  		, "0x0004"));
+        deviceCodes.add( new XFSDeviceCode( "\tCTRLSKIP"             			, "0x0008"));
+        deviceCodes.add( new XFSDeviceCode( "\tCTRLFLUSH"             			, "0x0010"));
+		deviceCodes.add( new XFSDeviceCode( "\tCTRLRETRACT"            			, "0x0020"));
+		deviceCodes.add( new XFSDeviceCode( "\tCTRLSTACK"           			, "0x0040"));
+		deviceCodes.add( new XFSDeviceCode( "\tCTRLPARTIALCUT"      			, "0x0080"));
+		deviceCodes.add( new XFSDeviceCode( "\tCTRLALARM"           			, "0x0100"));
+		deviceCodes.add( new XFSDeviceCode( "\tCTRLATPFORWARD"      			, "0x0200"));
+		deviceCodes.add( new XFSDeviceCode( "\tCTRLATPBACKWARD"     			, "0x0400"));
+		deviceCodes.add( new XFSDeviceCode( "\tCTRLTURNMEDIA"       			, "0x0800"));
+		deviceCodes.add( new XFSDeviceCode( "\tCTRLSTAMP"           			, "0x1000"));
+		deviceCodes.add( new XFSDeviceCode( "\tCTRLPARK"            			, "0x2000"));
+		deviceCodes.add( new XFSDeviceCode( "\tCTRLEXPEL"           			, "0x4000"));
+		deviceCodes.add( new XFSDeviceCode( "\tCTRLEJECTTOTRANSPORT"		 	, "0x8000"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.dwControlEx"			, ""));
+		deviceCodes.add( new XFSDeviceCode( "dwMediaControl"					, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tCTRLROTATE180"                   , "0x10000"));
+        deviceCodes.add( new XFSDeviceCode( "\tCTRLCLEARBUFFER"  				, "0x20001"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwPaperSources"			, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMMEDIA.wPaperSources"			, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRPRINTFORM.wPaperSource"		, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRPAPERTHRESHOLD.wPaperSource"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERANY"                      	, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERUPPER"  					, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERLOWER"               		, "0x04"));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPEREXTERNAL"         			, "0x08"));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERAUX"               			, "0x10"));
+		deviceCodes.add( new XFSDeviceCode( "\tPAPERAUX2"              			, "0x20"));
+		deviceCodes.add( new XFSDeviceCode( "\tPAPERPARK"            			, "0x40"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwControlPassbook"			, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCONTROLPASSBOOK.wAction"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tPBKCTRLNOTSUPP"                     	, "0x00"));
+        deviceCodes.add( new XFSDeviceCode( "\tPBKCTRLTURNFORWARD"					, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tPBKCTRLTURNBACKWARD"             	, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tPBKCTRLCLOSEFORWARD"         		, "0x04"));
+		deviceCodes.add( new XFSDeviceCode( "\tPBKCTRLCLOSEBACKWARD"         		, "0x08"));
+
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwImageType"				, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRIMAGEREQUEST.wFrontImageType"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRIMAGEREQUEST.wBackImageType"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tIMAGETIF"				, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tIMAGEWMF"             	, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tIMAGEBMP"         		, "0x04"));
+		deviceCodes.add( new XFSDeviceCode( "\tIMAGEJPG"         		, "0x08"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwFrontImageColorFormat"		, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwBackImageColorFormat"			, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRIMAGEREQUEST.wFrontImageColorFormat"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRIMAGEREQUEST.wBackImageColorFormat"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tIMAGECOLORBINARY"						, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tIMAGECOLORGRAYSCALE"     	        	, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tIMAGECOLORFULL" 			        		, "0x04"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwCodelineFormat"				, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRIMAGEREQUEST.wCodelineFormat"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tCODELINECMC7"							, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tCODELINEE13B"    			        	, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tCODELINEOCR" 	        				, "0x04"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwImageSource"				, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRIMAGEREQUEST.fwImageSource"		, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRIMAGE.wImageSource"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tIMAGEFRONT"							, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tIMAGEBACK"     			        	, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tCODELINE"  	        				, "0x04"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwCharSupport"				, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMHEADER.fwCharSupport"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tASCII"								, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tUNICODE"     			        	, "0x02"));
+        
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.fwCoercivityType"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tCOERCIVITYNOTSUPP"						, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tCOERCIVITYLOW"    			        	, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tCOERCIVITYHIGH" 	        				, "0x04"));
+		deviceCodes.add( new XFSDeviceCode( "\tCOERCIVITYAUTO" 	        				, "0x08"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.wPrintSides"					, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tPRINTSIDESNOTSUPP"						, "0x00"));
+        deviceCodes.add( new XFSDeviceCode( "\tPRINTSIDESSINGLE"  			        	, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tPRINTSIDESDUAL"           				, "0x02"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMHEADER.wBase"				, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMMEDIA.wBase"					, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRMEDIAUNIT.wBase"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tINCH"							, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tMM"         			        	, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tROWCOLUMN"         				, "2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMHEADER.wAlignment"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tTOPLEFT"    						, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tTOPRIGHT"      			       	, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tBOTTOMLEFT"         				, "2"));
+		deviceCodes.add( new XFSDeviceCode( "\tBOTTOMRIGHT"         			, "3"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMHEADER.wOrientation"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tPORTRAIT"    					, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tLANDSCAPE"      			       	, "1"));
+        
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMMEDIA.fwMediaType"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIAGENERIC"  					, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIAPASSBOOK"  			       	, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIAMULTIPART"     				, "2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMMEDIA.wFoldType"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tFOLDNONE"       					, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tFOLDHORIZONTAL"  			    , "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tFOLDVERTICAL"     				, "2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMFIELD.fwType"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDTEXT"      					, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDMICR"  			    		, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDOCR"         				, "2"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDMSF"         				, "3"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDBARCODE"     				, "4"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDGRAPHIC"     				, "5"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDPAGEMARK"    				, "6"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMFIELD.fwClass"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tCLASSSTATIC"   					, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tCLASSOPTIONAL"  			       	, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tCLASSREQUIRED"     				, "2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMFIELD.fwAccess"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tACCESSREAD"   					, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tACCESSWRITE"  			       	, "0x02"));
+        
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMFIELD.fwOverflow"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tOVFTERMINATE"    				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tOVFTRUNCATE" 		    		, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tOVFBESTFIT"        				, "2"));
+		deviceCodes.add( new XFSDeviceCode( "\tOVFOVERWRITE"      				, "3"));
+		deviceCodes.add( new XFSDeviceCode( "\tOVFWORDWRAP"     				, "4"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSFRMFIELD.wCoercivity"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tCOERCIVITYAUTO"    				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tCOERCIVITYLOW"  		    		, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tCOERCIVITYHIGH"     				, "2"));
+
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRFIELDFAIL.wFailure"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDREQUIRED"           		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDSTATICOVWR"      		    , "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDOVERFLOW"             		, "2"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDNOTFOUND"             		, "3"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDNOTREAD"              		, "4"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDNOTWRITE"             		, "5"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDHWERROR"    				, "6"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDTYPENOTSUPPORTED"    		, "7"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDGRAPHIC"    				, "8"));
+		deviceCodes.add( new XFSDeviceCode( "\tCHARSETFORM"    					, "9"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRPRINTFORM.wAlignment"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tALNUSEFORMDEFN"          		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tALNTOPLEFT"    		  		    , "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tALNTOPRIGHT"               		, "2"));
+		deviceCodes.add( new XFSDeviceCode( "\tALNBOTTOMLEFT"             		, "3"));
+		deviceCodes.add( new XFSDeviceCode( "\tALNBOTTOMRIGHT"            		, "4"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRPRINTFORM.wOffsetX"		, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRPRINTFORM.wOffsetY"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tOFFSETUSEFORMDEFN"          	, "0xffff"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRRAWDATA.wInputData"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tNOINPUTDATA"          		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tINPUTDATA" 	    		    , "1"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRIMAGE.wStatus"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDATAOK"          		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDATASRCNOTSUPP"		    , "1"));
+		deviceCodes.add( new XFSDeviceCode( "\tDATASRCMISSING" 		    , "2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRBINSTATUS.wRetractBin"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tRETRACTBININSERTED"        		, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tRETRACTBINREMOVED"     		    , "2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRDEFINITIONLOADED.dwDefinitionType"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tFORMLOADED"  					      		, "0x1"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIALOADED"     		    				, "0x2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSUPPLYREPLEN.fwSupplyReplen"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "\tPAPERUPPER"                  	, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERLOWER"						, "0x02"));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERAUX"               			, "0x04"));
+        deviceCodes.add( new XFSDeviceCode( "\tPAPERAUX2"         				, "0x08"));
+        deviceCodes.add( new XFSDeviceCode( "\tTONER"                			, "0x10"));
+		deviceCodes.add( new XFSDeviceCode( "\tINK"                  			, "0x20"));
+		deviceCodes.add( new XFSDeviceCode( "\tLAMP"							, "0x40"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRMEDIAREJECTED.wMediaRejected"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tSHORT"          						, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tLONG"        		    			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tMULTIPLE"         					, "2"));
+		deviceCodes.add( new XFSDeviceCode( "\tALIGN"            					, "3"));
+		deviceCodes.add( new XFSDeviceCode( "\tMOVETOALIGN"      					, "4"));
+		deviceCodes.add( new XFSDeviceCode( "\tSHUTTER"          					, "5"));
+		deviceCodes.add( new XFSDeviceCode( "\tESCROW"     							, "6"));
+		deviceCodes.add( new XFSDeviceCode( "\tTHICK"    							, "7"));
+		deviceCodes.add( new XFSDeviceCode( "\tOTHER"      							, "8"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRMEDIARETRACTED.wRetractResult"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tOK"          						, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIAJAMMED"        		    		, "1"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSTATUS.wBlackMarkMode"			, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSPTRSETBLACKMARKMODE.wBlackMarkMode"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tNOTSUPP"        						, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tON"          		    			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tOFF"		         					, "2"));
+		deviceCodes.add( new XFSDeviceCode( "\tUNKNOWN"          					, "3"));
+		
+		return deviceCodes;
+	}
+	
+	public static ArrayList<XFSDeviceCode> getTTUData( Context context) {
+		
+		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
+		
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUCAPS.wClass"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_TTU"		, "7"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUSTATUS.fwDevice"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVOFFLINE"			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVPOWEROFF"			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVNODEVICE"			, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVHWERROR"			, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVUSERERROR"		, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVBUSY"				, "6"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVFRAUDATTEMPT"		, "7"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVPOTENTIALFRAUD"	, "8"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUSTATUS.wKeyboard", ""));
+        deviceCodes.add( new XFSDeviceCode( "\tKBDNA" 				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tKBDON" 				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tKBDOFF"				, "2"));
+        
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUSTATUS.wKeyLock"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tKBDLOCKNA"  			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tKBDLOCKON"  			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tKBDLOCKOFF"			, "2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUSTATUS.fwLEDs"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUSTATUS.lpLEDEx.lpdwLEDs"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUCAPS.lpLEDEx.lpdwLEDs"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUSETLEDS.fwCommand"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tLEDNA"           			, "0x0000"));
+        deviceCodes.add( new XFSDeviceCode( "\tLEDOFF"          			, "0x0001"));
+        deviceCodes.add( new XFSDeviceCode( "\tLEDSLOWFLASH"				, "0x0002"));
+		deviceCodes.add( new XFSDeviceCode( "\tLEDMEDIUMFLASH"  			, "0x0004"));
+        deviceCodes.add( new XFSDeviceCode( "\tLEDQUICKFLASH"   			, "0x0008"));
+        deviceCodes.add( new XFSDeviceCode( "\tLEDCONTINUOUS"				, "0x0080"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUSTATUS.lpLEDEx.lpdwLEDs"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUCAPS.lpLEDEx.lpdwLEDs"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUSETLEDSEX.dwCommand"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tLEDRED"       			, "0x0100"));
+        deviceCodes.add( new XFSDeviceCode( "\tLEDGREEN"     			, "0x0200"));
+        deviceCodes.add( new XFSDeviceCode( "\tLEDYELLOW" 				, "0x0400"));
+		deviceCodes.add( new XFSDeviceCode( "\tLEDBLUE"  				, "0x0800"));
+        deviceCodes.add( new XFSDeviceCode( "\tLEDCYAN"      			, "0x1000"));
+        deviceCodes.add( new XFSDeviceCode( "\tLEDMAGENTA"				, "0x2000"));
+		deviceCodes.add( new XFSDeviceCode( "\tLEDWHITE"  				, "0x4000"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUSTATUS.wDevicePosition"		, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUDEVICEPOSITION.wPosition"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEINPOSITION"   				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICENOTINPOSITION"				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEPOSUNKNOWN"				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEPOSNOTSUPP"				, "3"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUSTATUS.wAntiFraudModule"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMNOTSUPP"       			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMOK"            			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMINOP"          			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMDEVICEDETECTED"			, "3"));
+		deviceCodes.add( new XFSDeviceCode( "\tAFMUNKNOWN"       			, "4"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUCAPS.fwType"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tFIXED"         			, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tREMOVABLE"				, "0x02"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUCAPS.fwCharSupport"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUWRITE.fwCharSupport"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tASCII"        			, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tUNICODE"					, "0x02"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUFRMFIELD.fwType"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDTEXT"       		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDINVISIBLE"			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDPASSWORD"         	, "2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUFRMFIELD.fwClass"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tCLASSOPTIONAL"   		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tCLASSSTATIC"				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tCLASSREQUIRED"         	, "2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUFRMFIELD.fwAccess"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tACCESSREAD"        		, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tACCESSWRITE"				, "0x02"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUFRMFIELD.fwOverflow"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tOVFTERMINATE"	   		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tOVFTRUNCATE" 			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tOVFOVERWRITE"         	, "2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUWRITE.fwMode"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tPOSRELATIVE"	   		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tPOSABSOLUTE"			, "1"));
+        
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUWRITE.fwTextAttr"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tTEXTUNDERLINE"        	, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tTEXTINVERTED"			, "0x02"));
+		deviceCodes.add( new XFSDeviceCode( "\tTEXTFLASH"				, "0x04"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUFRMREAD.fwEchoMode"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tECHOTEXT"	   			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tECHOINVISIBLE" 			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tECHOPASSWORD"         	, "2"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFS_CMD_TTU_BEEP lpwBeep"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tBEEPOFF"    		    	, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tBEEPKEYPRESS"   			, "0x02"));
+		deviceCodes.add( new XFSDeviceCode( "\tBEEPEXCLAMATION"			, "0x04"));
+		deviceCodes.add( new XFSDeviceCode( "\tBEEPWARNING"    			, "0x08"));
+		deviceCodes.add( new XFSDeviceCode( "\tBEEPERROR"      			, "0x10"));
+		deviceCodes.add( new XFSDeviceCode( "\tBEEPCRITICAL"   			, "0x20"));
+		deviceCodes.add( new XFSDeviceCode( "\tBEEPCONTINUOUS" 			, "0x80"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUFIELDFAIL.wFailure"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDREQUIRED"         			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDSTATICOVWR"       			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDOVERFLOW"         			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tFIELDNOTFOUND"					, "3"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDNOTREAD"          			, "4"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDNOTWRITE"         			, "5"));
+		deviceCodes.add( new XFSDeviceCode( "\tFIELDTYPENOTSUPPORTED" 			, "6"));
+		deviceCodes.add( new XFSDeviceCode( "\tCHARSETFORM"           			, "7"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSTTUFIELDFAIL.wFailure"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tNOKEY"            			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_ENTER"         			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_CANCEL"        			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_CLEAR"	       			, "3"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_BACKSPACE"     			, "4"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_HELP"          			, "5"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_00"			 			, "6"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_000"           			, "7"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_ARROWUP"       			, "8"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_ARROWDOWN"     			, "9"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_ARROWLEFT"     			, "10"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_ARROWRIGHT"	  			, "11"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_OEM1"          			, "12"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_OEM2"          			, "13"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_OEM3"			 			, "14"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_OEM4"          			, "15"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_OEM5"          			, "16"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_OEM6"          			, "17"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_OEM7"          			, "18"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_OEM8"        				, "19"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_OEM9"          			, "20"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_OEM10"         			, "21"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_OEM11" 					, "22"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_OEM12"         			, "23"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_FDK01"         			, "24"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_FDK02"         			, "25"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_FDK03"         			, "26"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_FDK04"       				, "27"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK05"         			, "28"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK06"         			, "29"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK07"		 			, "30"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK08"         			, "31"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK09"         			, "32"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_FDK10"         			, "33"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_FDK11"         			, "34"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_FDK12"	       			, "35"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK13"         			, "36"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK14"         			, "37"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK15"		 			, "38"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK16"         			, "39"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK17"         			, "40"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_FDK18"         			, "41"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_FDK19"         			, "42"));
+        deviceCodes.add( new XFSDeviceCode( "\tCK_FDK20"       				, "43"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK21"         			, "44"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK22"         			, "45"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK23" 					, "46"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK24"		 			, "47"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK25"		 			, "48"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK26" 					, "49"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK27"		 			, "50"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK28" 					, "51"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK29" 					, "52"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK30" 					, "53"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK31" 					, "54"));
+		deviceCodes.add( new XFSDeviceCode( "\tCK_FDK32" 					, "55"));
+		
+		return deviceCodes;
+	}
+	
+	public static ArrayList<XFSDeviceCode> getVDMData( Context context) {
+		
+		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
+		
+		deviceCodes.add( new XFSDeviceCode( "WFSVDMCAPS.wClass"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_VDM"		, "9"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSVDMSTATUS.fwDevice"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"					, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVOFFLINE"					, "1"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSVDMSTATUS.wService"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tENTERPENDING"				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tACTIVE"						, "1"));
+		deviceCodes.add( new XFSDeviceCode( "\tEXITPENDING"					, "2"));
+		deviceCodes.add( new XFSDeviceCode( "\tINACTIVE"					, "3"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSVDMACTIVEINTERFACE.wActiveInterface", ""));
+        deviceCodes.add( new XFSDeviceCode( "\tOPERATOR_INTERFACE"					, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tCONSUMER_INTERFACE"					, "1"));
+		
+		return deviceCodes;
+	}
+	
+	public static ArrayList<XFSDeviceCode> getBarCodeData( Context context) {
+		
+		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
+		
+		deviceCodes.add( new XFSDeviceCode( "WFSBCRCAPS.wClass"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_BCR"		, "15"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSVDMSTATUS.fwDevice"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVOFFLINE"			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVPOWEROFF"			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVNODEVICE"			, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVHWERROR"			, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVUSERERROR"		, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVBUSY"				, "6"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVFRAUDATTEMPT"		, "7"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVPOTENTIALFRAUD"	, "8"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSBCRSTATUS.fwBCRScanner"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tSCANNERON"     				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tSCANNEROFF"    				, "1"));
+		deviceCodes.add( new XFSDeviceCode( "\tSCANNERINOP"   				, "2"));
+		deviceCodes.add( new XFSDeviceCode( "\tSCANNERUNKNOWN"				, "3"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSBCRSTATUS.wDevicePosition", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSBCRDEVICEPOSITION.wPosition", ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEINPOSITION"    		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICENOTINPOSITION" 		, "1"));
+		deviceCodes.add( new XFSDeviceCode( "\tDEVICEPOSUNKNOWN"    		, "2"));
+		deviceCodes.add( new XFSDeviceCode( "\tDEVICEPOSNOTSUPP"			, "3"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSBCRCAPS.lpwSymbologies"			, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSBCRREADINPUT.lpwSymbologies"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSBCRREADOUTPUT.wSymbology"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tUNKNOWN"              			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tEAN128"               			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tEAN8"                 			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tEAN8_2"                 			, "3"));
+		deviceCodes.add( new XFSDeviceCode( "\tEAN8_5"               			, "4"));
+		deviceCodes.add( new XFSDeviceCode( "\tEAN13"                			, "5"));
+		deviceCodes.add( new XFSDeviceCode( "\tEAN13_2"         	 			, "6"));
+		deviceCodes.add( new XFSDeviceCode( "\tEAN13_5"              			, "7"));
+		deviceCodes.add( new XFSDeviceCode( "\tJAN13"                			, "8"));
+        deviceCodes.add( new XFSDeviceCode( "\tUPCA"                 			, "9"));
+        deviceCodes.add( new XFSDeviceCode( "\tUPCE0"                			, "10"));
+        deviceCodes.add( new XFSDeviceCode( "\tUPCE0_2"	  						, "11"));
+		deviceCodes.add( new XFSDeviceCode( "\tUPCE0_5"              			, "12"));
+		deviceCodes.add( new XFSDeviceCode( "\tUPCE1"                			, "13"));
+		deviceCodes.add( new XFSDeviceCode( "\tUPCE1_2"         	 			, "14"));
+		deviceCodes.add( new XFSDeviceCode( "\tUPCE1_5"              			, "15"));
+		deviceCodes.add( new XFSDeviceCode( "\tUPCA_2"               			, "16"));
+        deviceCodes.add( new XFSDeviceCode( "\tUPCA_5"               			, "17"));
+        deviceCodes.add( new XFSDeviceCode( "\tCODABAR"              			, "18"));
+        deviceCodes.add( new XFSDeviceCode( "\tITF"                				, "19"));
+		deviceCodes.add( new XFSDeviceCode( "\t11"                   			, "20"));
+		deviceCodes.add( new XFSDeviceCode( "\t39"                   			, "21"));
+		deviceCodes.add( new XFSDeviceCode( "\t49"              				, "22"));
+		deviceCodes.add( new XFSDeviceCode( "\t93"                   			, "23"));
+        deviceCodes.add( new XFSDeviceCode( "\t128"                  			, "24"));
+        deviceCodes.add( new XFSDeviceCode( "\tMSI"                  			, "25"));
+        deviceCodes.add( new XFSDeviceCode( "\tPLESSEY"              			, "26"));
+        deviceCodes.add( new XFSDeviceCode( "\tSTD2OF5"            				, "27"));
+		deviceCodes.add( new XFSDeviceCode( "\tSTD2OF5_IATA"         			, "28"));
+		deviceCodes.add( new XFSDeviceCode( "\tPDF_417"              			, "29"));
+		deviceCodes.add( new XFSDeviceCode( "\tMICROPDF_417"    	 			, "30"));
+		deviceCodes.add( new XFSDeviceCode( "\tDATAMATRIX"           			, "31"));
+		deviceCodes.add( new XFSDeviceCode( "\tMAXICODE"             			, "32"));
+        deviceCodes.add( new XFSDeviceCode( "\tCODEONE"              			, "33"));
+        deviceCodes.add( new XFSDeviceCode( "\tCHANNELCODE"          			, "34"));
+        deviceCodes.add( new XFSDeviceCode( "\tTELEPEN_ORIGINAL"       			, "35"));
+		deviceCodes.add( new XFSDeviceCode( "\tTELEPEN_AIM"          			, "36"));
+		deviceCodes.add( new XFSDeviceCode( "\tRSS"                  			, "37"));
+		deviceCodes.add( new XFSDeviceCode( "\tRSS_EXPANDED"    	 			, "38"));
+		deviceCodes.add( new XFSDeviceCode( "\tRSS_RESTRICTED"       			, "39"));
+		deviceCodes.add( new XFSDeviceCode( "\tCOMPOSITE_CODE_A"     			, "40"));
+        deviceCodes.add( new XFSDeviceCode( "\tCOMPOSITE_CODE_B"     			, "41"));
+        deviceCodes.add( new XFSDeviceCode( "\tCOMPOSITE_CODE_C"     			, "42"));
+        deviceCodes.add( new XFSDeviceCode( "\tPOSICODE_A"         				, "43"));
+		deviceCodes.add( new XFSDeviceCode( "\tPOSICODE_B"           			, "44"));
+		deviceCodes.add( new XFSDeviceCode( "\tTRIOPTIC_CODE_39"     			, "45"));
+		deviceCodes.add( new XFSDeviceCode( "\tCODABLOCK_F"     				, "46"));
+		deviceCodes.add( new XFSDeviceCode( "\tCODE_16K"        	 			, "47"));
+		deviceCodes.add( new XFSDeviceCode( "\tQRCODE"          	 			, "48"));
+		deviceCodes.add( new XFSDeviceCode( "\tAZTEC"           				, "49"));
+		deviceCodes.add( new XFSDeviceCode( "\tUKPOST"          	 			, "50"));
+		deviceCodes.add( new XFSDeviceCode( "\tPLANET"          				, "51"));
+		deviceCodes.add( new XFSDeviceCode( "\tPOSTNET"         				, "52"));
+		deviceCodes.add( new XFSDeviceCode( "\tCANADIANPOST"    				, "53"));
+		deviceCodes.add( new XFSDeviceCode( "\tNETHERLANDSPOST" 				, "54"));
+		deviceCodes.add( new XFSDeviceCode( "\tAUSTRALIANPOST"  				, "55"));
+		deviceCodes.add( new XFSDeviceCode( "\tJAPANESEPOST"    				, "56"));
+		deviceCodes.add( new XFSDeviceCode( "\tCHINESEPOST"     				, "57"));
+		deviceCodes.add( new XFSDeviceCode( "\tKOREANPOST"      				, "58"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSBCRSTATUS.wAntiFraudModule"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "\tAFMNOTSUPP"              	, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMOK"                       , "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMINOP"                     , "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMDEVICEDETECTED"           , "3"));
+		deviceCodes.add( new XFSDeviceCode( "\tAFMUNKNOWN"                  , "4"));
+		
+		return deviceCodes;
+	}
+	
+	public static ArrayList<XFSDeviceCode> getDepositData( Context context) {
+		
+		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
+		
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPCAPS.wClass"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_DEP"		, "6"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPSTATUS.fwDevice"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVOFFLINE"			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVPOWEROFF"			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVNODEVICE"			, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVHWERROR"			, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVUSERERROR"		, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVBUSY"				, "6"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVFRAUDATTEMPT"		, "7"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVPOTENTIALFRAUD"	, "8"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPSTATUS.fwDepContainer"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "fwDepTransport"				, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPOK"     		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPHIGH"   		, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPFULL"   		, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPINOP"   		, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPMISSING"		, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPUNKNOWN"		, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPNOTSUPP"		, "6"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPSTATUS.fwEnvSupply"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "fwEnvDispenser"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tENVOK"       			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tENVLOW"      			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tENVEMPTY"    			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tENVINOP"     			, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tENVMISSING"				, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tENVUNKNOWN"				, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tENVNOTSUPP"				, "6"));
+		deviceCodes.add( new XFSDeviceCode( "\tENVUNLOCKED"				, "7"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPSTATUS.fwPrinter"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tPTROK"          			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tPTRINOP"        			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tPTRUNKNOWN"    			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tPTRNOTSUPP"     			, "3"));
+        
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPSTATUS.fwToner"		, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tTONERFULL"      			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tTONERLOW"       			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tTONEROUT"       			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tTONERUNKNOWN"   			, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tTONERNOTSUPP"			, "4"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPSTATUS.fwShutter"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tSHTCLOSED"     			, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHTOPEN"       			, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHTJAMMED"     			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHTUNKNOWN"   			, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tSHTNOTSUPP"				, "4"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPSTATUS.fwDepositLocation"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPLOCNOTSUPP"    				, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPLOCUNKNOWN"    				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPLOCCONTAINER"  				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPLOCTRANSPORT"  				, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPLOCPRINTER"  					, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPLOCSHUTTER"  					, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEPLOCNONE"     					, "6"));
+		deviceCodes.add( new XFSDeviceCode( "\tDEPLOCREMOVED"					, "7"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPSTATUS.wDevicePosition"	, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPDEVICEPOSITION.wPosition", ""));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEINPOSITION"        	, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICENOTINPOSITION"     	, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEPOSUNKNOWN"    		, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tDEVICEPOSNOTSUPP"        	, "3"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPCAPS.fwType"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPEENVELOPE"      	, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tTYPEBAGDROP"     	, "0x02"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPCAPS.fwEnvSupply"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tENVMOTORIZED"     		, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tENVMANUAL"     			, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tENVNONE"           		, "3"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPCAPS.fwRetractEnvelope"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tNORETRACT"   		  		, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tRETRACTDEP"    				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tRETRACTDISP"       			, "3"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPCAPS.fwCharSupport"		, ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPENVELOPE.fwCharSupport"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tASCII"  				    	, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tUNICODE"     				, "0x02"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "dwDepMediaControl"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tCTRLEJECT"   	    	, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tCTRLRETRACT" 			, "0x02"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPMEDIADETECTED.wDispenseMedia", ""));
+		deviceCodes.add( new XFSDeviceCode( "wDepositMedia"						, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tNOMEDIA"          				, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIARETRACTED"  				, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIADISPENSER"  				, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIAEJECTED"   					, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIAJAMMED"    					, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tMEDIAUNKNOWN"   					, "6"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPSUPPLYREPLEN.fwSupplyReplen"			, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tREPLEN_ENV"    	    	, "0x01"));
+        deviceCodes.add( new XFSDeviceCode( "\tREPLEN_TONER" 			, "0x02"));
+		
+		deviceCodes.add( new XFSDeviceCode("", ""));
+		deviceCodes.add( new XFSDeviceCode( "WFSDEPSTATUS.wAntiFraudModule"	, ""));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMNOTSUPP"           		, "0"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMOK"  						, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMINOP"  					, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMDEVICEDETECTED"  			, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tAFMUNKNOWN"         			, "4"));
 		
 		return deviceCodes;
 	}
