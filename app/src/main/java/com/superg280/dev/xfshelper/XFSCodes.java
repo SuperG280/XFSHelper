@@ -4207,7 +4207,7 @@ public class XFSCodes {
 		return deviceCodes;
 	}
 	
-	public static ArrayList<XFSDeviceCode> getTTUData( Context context) {
+	public static ArrayList<XFSDeviceCode> getTTUData( ) {
 		
 		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 		
@@ -4412,7 +4412,7 @@ public class XFSCodes {
 		return deviceCodes;
 	}
 	
-	public static ArrayList<XFSDeviceCode> getVDMData( Context context) {
+	public static ArrayList<XFSDeviceCode> getVDMData( ) {
 		
 		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 		
@@ -4439,7 +4439,7 @@ public class XFSCodes {
 		return deviceCodes;
 	}
 	
-	public static ArrayList<XFSDeviceCode> getBarCodeData( Context context) {
+	public static ArrayList<XFSDeviceCode> getBarCodeData( ) {
 		
 		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 		
@@ -4548,7 +4548,7 @@ public class XFSCodes {
 		return deviceCodes;
 	}
 	
-	public static ArrayList<XFSDeviceCode> getDepositData( Context context) {
+	public static ArrayList<XFSDeviceCode> getDepositData( ) {
 		
 		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 		

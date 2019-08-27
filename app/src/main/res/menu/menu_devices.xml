@@ -5,13 +5,19 @@
     tools:context=".DevicesActivity">
 
     <item
-        android:id="@+id/action_devices_add"
+        android:id="@+id/action_devices_undo_selection"
         android:orderInCategory="300"
+        android:title="@string/action_devices_undo_selection"
+        android:icon="@drawable/deselect_all"
+        app:showAsAction="ifRoom">
+
+    </item>
+    <item
+        android:id="@+id/action_devices_add"
+        android:orderInCategory="301"
         android:title="@string/action_devices_add"
         android:icon="@drawable/icon_add"
         app:showAsAction="ifRoom">
 
     </item>
-
-
 </menu>

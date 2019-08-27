@@ -26,6 +26,7 @@
     <string name="about_xfs_message">Versión XFS soportada: 3.30</string>
     <string name="about_copyright">SuperG © 2019</string>
     <string name="action_devices_add">Sumar</string>
+    <string name="action_devices_undo_selection">Undo</string>
     <string name="devices_add_no_selection_text">Selecciona primero constantes en hexadecimal para sumarlos</string>
     <string name="devices_add_result_text">Suma:</string>
     <string name="devices_add_result_close">Cerrar</string>

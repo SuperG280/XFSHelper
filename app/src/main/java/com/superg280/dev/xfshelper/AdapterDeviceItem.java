@@ -1,16 +1,11 @@
 package com.superg280.dev.xfshelper;
 
-import android.graphics.Color;
 import android.support.constraint.ConstraintLayout;
-import android.support.v7.widget.RecyclerView;
 import android.widget.BaseAdapter;
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckedTextView;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -20,8 +15,6 @@ public class AdapterDeviceItem extends BaseAdapter {
 
     private Context activity;
     private ArrayList<XFSDeviceCode> items = new ArrayList<>();
-    private boolean isSelected[];
-    private Callback listener;
 
     private class ViewHolder {
         ConstraintLayout constraintLayout;
@@ -32,13 +25,7 @@ public class AdapterDeviceItem extends BaseAdapter {
     AdapterDeviceItem(Context activity, ArrayList<XFSDeviceCode> items) {
         this.activity = activity;
         this.items    = items;
-        isSelected = new boolean[items.size()];
     }
-
- //   @Override
-//    public boolean isEnabled(int position) {
-//        return false;
-//    }
 
     @Override
     public int getCount() {
@@ -51,27 +38,39 @@ public class AdapterDeviceItem extends BaseAdapter {
             items.clear();
     }
 
-    public void setListener(Callback listener)    {
-        this.listener = listener;
+    public boolean changeSelectedInListView( int position) {
+
+        if( items != null && items.size() > position) {
+            XFSDeviceCode xfsCode = items.get(position);
+            if( xfsCode.getValue().contains("0x")) {
+                xfsCode.setSelectedInListView(!xfsCode.isSelectedInListView());
+                return true;
+            }
+        }
+        return false;
     }
 
-    public void addAll(ArrayList<XFSDeviceCode> newItems) {
-        items.addAll(newItems);
+    public void deselectAllInListView() {
+
+        for( int i = 0; i < items.size(); i++) {
+            items.get(i).setSelectedInListView(false);
+        }
     }
 
-    public void setNewArrayItems( ArrayList<XFSDeviceCode> newItems) {
-        if( newItems.isEmpty())
-            return;
-
-        items = newItems;
+    public boolean isOneOrMoreSelected() {
+        for( XFSDeviceCode xfsCode: items) {
+            if( xfsCode.isSelectedInListView())
+                return true;
+        }
+        return false;
     }
 
-    public XFSDeviceCode getItemSelected( int position) {
-        return items.get( position);
-    }
-
-    public boolean[] getSelectedFlags(){
-        return isSelected;
+    public boolean[] getSelectedInListView(){
+        boolean[] Result = new boolean[ items.size()];
+        for( int i = 0; i < items.size(); i++) {
+            Result[ i] = items.get(i).isSelectedInListView();
+        }
+        return Result;
     }
 
     @Override
@@ -108,7 +107,7 @@ public class AdapterDeviceItem extends BaseAdapter {
         holder.textView.setText(deviceItem.getName());
         holder.textViewResult.setText(deviceItem.getValue());
 
-        if( isSelected[position]) {
+        if( deviceItem.isSelectedInListView()) {
             holder.constraintLayout.setBackgroundColor(activity.getColor(R.color.colorDeviceSelected));
             holder.textView.setTextColor(activity.getColor(R.color.colorDeviceSelectedText));
             holder.textViewResult.setTextColor(activity.getColor(R.color.colorDeviceSelectedText));
@@ -117,32 +116,6 @@ public class AdapterDeviceItem extends BaseAdapter {
             holder.textView.setTextColor(activity.getColor(R.color.colorDeviceText));
             holder.textViewResult.setTextColor(activity.getColor(R.color.colorDeviceText));
         }
-
-        holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               if( !holder.textViewResult.getText().toString().contains("0x"))
-                   return;
-
-               boolean flag = holder.textView.isSelected();
-               holder.textView.setSelected(!flag);
-               isSelected[position] = !isSelected[position];
-
-               if(listener!=null) {
-                   listener.onChangeInSelection();
-               }
-
-               if(holder.textView.isSelected()){
-                   holder.constraintLayout.setBackgroundColor(activity.getColor(R.color.colorDeviceSelected));
-                   holder.textView.setTextColor(activity.getColor(R.color.colorDeviceSelectedText));
-                   holder.textViewResult.setTextColor(activity.getColor(R.color.colorDeviceSelectedText));
-               } else {
-                   holder.constraintLayout.setBackgroundResource(0);
-                   holder.textView.setTextColor(activity.getColor(R.color.colorDeviceText));
-                   holder.textViewResult.setTextColor(activity.getColor(R.color.colorDeviceText));
-               }
-           }
-       });
 
         return v;
     }

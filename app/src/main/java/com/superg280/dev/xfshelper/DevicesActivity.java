@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class DevicesActivity extends AppCompatActivity implements Callback {
+public class DevicesActivity extends AppCompatActivity {
 
     private AdapterDeviceItem adapterDevice = null;
     private boolean hideAddButton = true;
@@ -60,19 +60,19 @@ public class DevicesActivity extends AppCompatActivity implements Callback {
                         items = XFSCodes.getNoteAcceptorData();
                         break;
                     case Devices.DEV_PRINTER:
-                        //items = XFSCodes.getPrinterData();
+                        items = XFSCodes.getPrinterData(getApplicationContext());
                         break;
                     case Devices.DEV_VDM:
-                        //items = XFSCodes.getPrinterData();
+                        items = XFSCodes.getVDMData();
                         break;
                     case Devices.DEV_TTU:
-                        //items = XFSCodes.getPrinterData();
+                        items = XFSCodes.getTTUData();
                         break;
                     case Devices.DEV_BARCODE:
-                        //items = XFSCodes.getPrinterData();
+                        items = XFSCodes.getBarCodeData();
                         break;
                     case Devices.DEV_DEPOSIT:
-                        //items = XFSCodes.getPrinterData();
+                        items = XFSCodes.getDepositData();
                         break;
                 }
 
@@ -88,7 +88,17 @@ public class DevicesActivity extends AppCompatActivity implements Callback {
                 adapterDevice = new AdapterDeviceItem( getApplicationContext(), items);
                 lv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
                 lv.setAdapter(adapterDevice);
-                adapterDevice.setListener( DevicesActivity.this);
+
+                lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        //Toast.makeText(DevicesActivity.this, "Pos: " + i, Toast.LENGTH_SHORT).show();
+                        if( adapterDevice.changeSelectedInListView( i)) {
+                            adapterDevice.notifyDataSetChanged();
+                            hideOrShowActionButton();
+                        }
+                    }
+                });
             }
 
             @Override
@@ -100,22 +110,8 @@ public class DevicesActivity extends AppCompatActivity implements Callback {
 
     public void hideOrShowActionButton( ) {
 
-        boolean isSelected[] = adapterDevice.getSelectedFlags();
-        for( boolean b: isSelected) {
-            if( b) {
-                hideAddButton = false;
-                invalidateOptionsMenu();
-                return;
-            }
-        }
-        hideAddButton = true;
+        hideAddButton = !adapterDevice.isOneOrMoreSelected();
         invalidateOptionsMenu();
-    }
-
-    @Override
-    public void onChangeInSelection()
-    {
-        hideOrShowActionButton( );
     }
 
     @Override
@@ -123,11 +119,16 @@ public class DevicesActivity extends AppCompatActivity implements Callback {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_devices, menu);
 
-        MenuItem item = menu.findItem(R.id.action_devices_add);
-        if( hideAddButton)
-            item.setVisible(false);
-        else
-            item.setVisible(true);
+        MenuItem itemAdd = menu.findItem(R.id.action_devices_add);
+        MenuItem itemUndo = menu.findItem(R.id.action_devices_undo_selection);
+
+        if( hideAddButton) {
+            itemAdd.setVisible(false);
+            itemUndo.setVisible(false);
+        } else {
+            itemAdd.setVisible(true);
+            itemUndo.setVisible(true);
+        }
 
         return true;
     }
@@ -141,17 +142,17 @@ public class DevicesActivity extends AppCompatActivity implements Callback {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_devices_add) {
-            boolean isSelected[] = adapterDevice.getSelectedFlags();
+            boolean[] isSelected = adapterDevice.getSelectedInListView();
 
             //String strResult = "";
-            int add = 0;
+            long add = 0;
 
             for( int i = 0; i < isSelected.length; i++) {
                 if( isSelected[i]) {
                     XFSDeviceCode code = (XFSDeviceCode) adapterDevice.getItem(i);
                     //strResult += code.getValue() + " ";
                     try {
-                        add += Integer.parseInt(code.getValue().substring(2), 16);
+                        add += Long.parseLong(code.getValue().substring(2), 16);
                     } catch( Exception ex) {
                         add = 0;
                     }
@@ -164,14 +165,20 @@ public class DevicesActivity extends AppCompatActivity implements Callback {
             }
 
             Snackbar.make(lv, text, Snackbar.LENGTH_INDEFINITE)
-                    .setActionTextColor(getResources().getColor(R.color.colorDeviceSelectedText))
+                    .setActionTextColor( DevicesActivity.this.getColor(R.color.colorDeviceSelectedText))
                     .setAction(getResources().getString(R.string.devices_add_result_close), new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    //Al pulsar se cierra, así que no hay que hacer nada aquí.
                 }
             }).show();
 
+            return true;
+        } else if( id == R.id.action_devices_undo_selection) {
+
+            adapterDevice.deselectAllInListView();
+            adapterDevice.notifyDataSetChanged();
+            hideOrShowActionButton();
             return true;
         }
 
