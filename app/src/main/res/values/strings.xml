@@ -13,7 +13,7 @@
     <string name="main_help_find1">dwCategory</string>
     <string name="main_help_find2">dwCommand</string>
     <string name="main_help_find3">hResult</string>
-    <string name="devices_select_label">Dispositivo</string>
+    <string name="devices_select_label">Interfaz</string>
     <string name="devices_sensors_arrays_size">Tamaño de arrays</string>
     <string name="devices_generic_indices_of">Indices de arrays</string>
     <string name="devices_sensors_values_of">Valores para</string>

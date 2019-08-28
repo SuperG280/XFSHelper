@@ -1253,6 +1253,387 @@ public class XFSCodes {
                 element.setDescription( "");
                 break;
 
+            ///////////////////////////////////////////////////////
+            //Errores ALM:
+            case -1100:
+                element.setErrorCode( "WFS_ERR_ALM_COMMANDUNSUPP");
+                element.setDescription( "");
+                break;
+            case -1101:
+                element.setErrorCode( "WFS_ERR_ALM_SYNCHRONIZEUNSUPP");
+                element.setDescription( "");
+                break;
+
+            ///////////////////////////////////////////////////////
+            //Errores CAM:
+            case -1000:
+                element.setErrorCode( "WFS_ERR_CAM_CAMNOTSUPP");
+                element.setDescription( "");
+                break;
+            case -1001:
+                element.setErrorCode( "WFS_ERR_CAM_MEDIAFULL");
+                element.setDescription( "");
+                break;
+            case -1002:
+                element.setErrorCode( "WFS_ERR_CAM_CAMINOP");
+                element.setDescription( "");
+                break;
+            case -1003:
+                element.setErrorCode( "WFS_ERR_CAM_CHARSETNOTSUPP");
+                element.setDescription( "");
+                break;
+            case -1004:
+                element.setErrorCode( "WFS_ERR_CAM_FILEIOERROR");
+                element.setDescription( "");
+                break;
+            case -1005:
+                element.setErrorCode( "WFS_ERR_CAM_COMMANDUNSUPP");
+                element.setDescription( "");
+                break;
+            case -1006:
+                element.setErrorCode( "WFS_ERR_CAM_SYNCHRONIZEUNSUPP");
+                element.setDescription( "");
+                break;
+
+            ///////////////////////////////////////////////////////
+            //Errores CEU:
+            case -1201:
+                element.setErrorCode( "WFS_ERR_CEU_FORMNOTFOUND");
+                element.setDescription( "");
+                break;
+            case -1202:
+                element.setErrorCode( "WFS_ERR_CEU_FORMINVALID");
+                element.setDescription( "");
+                break;
+            case -1203:
+                element.setErrorCode( "WFS_ERR_CEU_MEDIANOTFOUND");
+                element.setDescription( "");
+                break;
+            case -1204:
+                element.setErrorCode( "WFS_ERR_CEU_MEDIAINVALID");
+                element.setDescription( "");
+                break;
+            case -1205:
+                element.setErrorCode( "WFS_ERR_CEU_NOMEDIA");
+                element.setDescription( "");
+                break;
+            case -1206:
+                element.setErrorCode( "WFS_ERR_CEU_MEDIAOVERFLOW");
+                element.setDescription( "");
+                break;
+            case -1207:
+                element.setErrorCode( "WFS_ERR_CEU_IDC_FORMNOTFOUND");
+                element.setDescription( "");
+                break;
+            case -1208:
+                element.setErrorCode( "WFS_ERR_CEU_IDC_FORMINVALID");
+                element.setDescription( "");
+                break;
+            case -1209:
+                element.setErrorCode( "WFS_ERR_CEU_INVALIDDATA");
+                element.setDescription( "");
+                break;
+            case -1210:
+                element.setErrorCode( "WFS_ERR_CEU_PROTOCOLNOTSUPP");
+                element.setDescription( "");
+                break;
+            case -1211:
+                element.setErrorCode( "WFS_ERR_CEU_ATRNOTOBTAINED");
+                element.setDescription( "");
+                break;
+            case -1212:
+                element.setErrorCode( "WFS_ERR_CEU_FIELDSPECFAILURE");
+                element.setDescription( "");
+                break;
+            case -1213:
+                element.setErrorCode( "WFS_ERR_CEU_FIELDERROR");
+                element.setDescription( "");
+                break;
+            case -1214:
+                element.setErrorCode( "WFS_ERR_CEU_EMBOSSFAILURE");
+                element.setDescription( "");
+                break;
+            case -1215:
+                element.setErrorCode( "WFS_ERR_CEU_FIELDNOTFOUND");
+                element.setDescription( "");
+                break;
+            case -1216:
+                element.setErrorCode( "WFS_ERR_CEU_POWERSAVETOOSHORT");
+                element.setDescription( "");
+                break;
+            case -1217:
+                element.setErrorCode( "WFS_ERR_CEU_POWERSAVEMEDIAPRESENT");
+                element.setDescription( "");
+                break;
+            case -1218:
+                element.setErrorCode( "WFS_ERR_CEU_CHARSETDATA");
+                element.setDescription( "");
+                break;
+            case -1219:
+                element.setErrorCode( "WFS_ERR_CEU_COMMANDUNSUPP");
+                element.setDescription( "");
+                break;
+            case -1220:
+                element.setErrorCode( "WFS_ERR_CEU_SYNCHRONIZEUNSUPP");
+                element.setDescription( "");
+                break;
+
+            ///////////////////////////////////////////////////////
+            //Errores CHK:
+            case -500:
+                element.setErrorCode( "WFS_ERR_CHK_FORMNOTFOUND");
+                element.setDescription( "");
+                break;
+            case -501:
+                element.setErrorCode( "WFS_ERR_CHK_FORMINVALID");
+                element.setDescription( "");
+                break;
+            case -502:
+                element.setErrorCode( "WFS_ERR_CHK_MEDIANOTFOUND");
+                element.setDescription( "");
+                break;
+            case -503:
+                element.setErrorCode( "WFS_ERR_CHK_MEDIAINVALID");
+                element.setDescription( "");
+                break;
+            case -504:
+                element.setErrorCode( "WFS_ERR_CHK_MEDIAOVERFLOW");
+                element.setDescription( "");
+                break;
+            case -505:
+                element.setErrorCode( "WFS_ERR_CHK_FIELDNOTFOUND");
+                element.setDescription( "");
+                break;
+            case -506:
+                element.setErrorCode( "WFS_ERR_CHK_FIELDINVALID");
+                element.setDescription( "");
+                break;
+            case -507:
+                element.setErrorCode( "WFS_ERR_CHK_FIELDERROR");
+                element.setDescription( "");
+                break;
+            case -508:
+                element.setErrorCode( "WFS_ERR_CHK_REQDFIELDMISSING");
+                element.setDescription( "");
+                break;
+            case -509:
+                element.setErrorCode( "WFS_ERR_CHK_FIELDSPECFAILURE");
+                element.setDescription( "");
+                break;
+            case -510:
+                element.setErrorCode( "WFS_ERR_CHK_CHARSETDATA");
+                element.setDescription( "");
+                break;
+            case -511:
+                element.setErrorCode( "WFS_ERR_CHK_MEDIAJAM");
+                element.setDescription( "");
+                break;
+            case -512:
+                element.setErrorCode( "WFS_ERR_CHK_SHUTTERFAIL");
+                element.setDescription( "");
+                break;
+            case -513:
+                element.setErrorCode( "WFS_ERR_CHK_INVALID_PORT");
+                element.setDescription( "");
+                break;
+            case -514:
+                element.setErrorCode( "WFS_ERR_CHK_POWERSAVETOOSHORT");
+                element.setDescription( "");
+                break;
+            case -515:
+                element.setErrorCode( "WFS_ERR_CHK_POWERSAVEMEDIAPRESENT");
+                element.setDescription( "");
+                break;
+            case -516:
+                element.setErrorCode( "WFS_ERR_CHK_COMMANDUNSUPP");
+                element.setDescription( "");
+                break;
+            case -517:
+                element.setErrorCode( "WFS_ERR_CHK_SYNCHRONIZEUNSUPP");
+                element.setDescription( "");
+                break;
+
+            ///////////////////////////////////////////////////////
+            //Errores CRD:
+            case -1400:
+                element.setErrorCode( "WFS_ERR_CRD_MEDIAJAM");
+                element.setDescription( "");
+                break;
+            case -1401:
+                element.setErrorCode( "WFS_ERR_CRD_NOMEDIA");
+                element.setDescription( "");
+                break;
+            case -1402:
+                element.setErrorCode( "WFS_ERR_CRD_MEDIARETAINED");
+                element.setDescription( "");
+                break;
+            case -1403:
+                element.setErrorCode( "WFS_ERR_CRD_RETAINBINFULL");
+                element.setDescription( "");
+                break;
+            case -1404:
+                element.setErrorCode( "WFS_ERR_CRD_SHUTTERFAIL");
+                element.setDescription( "");
+                break;
+            case -1405:
+                element.setErrorCode( "WFS_ERR_CRD_DEVICE_OCCUPIED");
+                element.setDescription( "");
+                break;
+            case -1406:
+                element.setErrorCode( "WFS_ERR_CRD_CARDUNITERROR");
+                element.setDescription( "");
+                break;
+            case -1407:
+                element.setErrorCode( "WFS_ERR_CRD_INVALIDCARDUNIT");
+                element.setDescription( "");
+                break;
+            case -1408:
+                element.setErrorCode( "WFS_ERR_CRD_INVALID_PORT");
+                element.setDescription( "");
+                break;
+            case -1409:
+                element.setErrorCode( "WFS_ERR_CRD_INVALIDRETAINBIN");
+                element.setDescription( "");
+                break;
+            case -1410:
+                element.setErrorCode( "WFS_ERR_CRD_POWERSAVETOOSHORT");
+                element.setDescription( "");
+                break;
+            case -1411:
+                element.setErrorCode( "WFS_ERR_CRD_POWERSAVEMEDIAPRESENT");
+                element.setDescription( "");
+                break;
+            case -1412:
+                element.setErrorCode( "WFS_ERR_CRD_COMMANDUNSUPP");
+                element.setDescription( "");
+                break;
+            case -1413:
+                element.setErrorCode( "WFS_ERR_CRD_SYNCHRONIZEUNSUPP");
+                element.setDescription( "");
+                break;
+
+            ///////////////////////////////////////////////////////
+            //Errores IPM:
+            case -1601:
+                element.setErrorCode( "WFS_ERR_IPM_NOMEDIAPRESENT");
+                element.setDescription( "");
+                break;
+            case -1602:
+                element.setErrorCode( "WFS_ERR_IPM_MEDIABINFULL");
+                element.setDescription( "");
+                break;
+            case -1603:
+                element.setErrorCode( "WFS_ERR_IPM_STACKERFULL");
+                element.setDescription( "");
+                break;
+            case -1604:
+                element.setErrorCode( "WFS_ERR_IPM_SHUTTERFAIL");
+                element.setDescription( "");
+                break;
+            case -1605:
+                element.setErrorCode( "WFS_ERR_IPM_MEDIAJAMMED");
+                element.setDescription( "");
+                break;
+            case -1606:
+                element.setErrorCode( "WFS_ERR_IPM_FILEIOERROR");
+                element.setDescription( "");
+                break;
+            case -1607:
+                element.setErrorCode( "WFS_ERR_IPM_INKOUT");
+                element.setDescription( "");
+                break;
+            case -1608:
+                element.setErrorCode( "WFS_ERR_IPM_TONEROUT");
+                element.setDescription( "");
+                break;
+            case -1609:
+                element.setErrorCode( "WFS_ERR_IPM_SCANNERINOP");
+                element.setDescription( "");
+                break;
+            case -1610:
+                element.setErrorCode( "WFS_ERR_IPM_MICRINOP");
+                element.setDescription( "");
+                break;
+            case -1611:
+                element.setErrorCode( "WFS_ERR_IPM_SEQUENCEINVALID");
+                element.setDescription( "");
+                break;
+            case -1612:
+                element.setErrorCode( "WFS_ERR_IPM_INVALID_PORT");
+                element.setDescription( "");
+                break;
+            case -1613:
+                element.setErrorCode( "WFS_ERR_IPM_FOREIGNITEMSDETECTED");
+                element.setDescription( "");
+                break;
+            case -1614:
+                element.setErrorCode( "WFS_ERR_IPM_INVALIDMEDIAID");
+                element.setDescription( "");
+                break;
+            case -1615:
+                element.setErrorCode( "WFS_ERR_IPM_MEDIABINERROR");
+                element.setDescription( "");
+                break;
+            case -1616:
+                element.setErrorCode( "WFS_ERR_IPM_POSITIONNOTEMPTY");
+                element.setDescription( "");
+                break;
+            case -1617:
+                element.setErrorCode( "WFS_ERR_IPM_INVALIDBIN");
+                element.setDescription( "");
+                break;
+            case -1618:
+                element.setErrorCode( "WFS_ERR_IPM_NOBIN");
+                element.setDescription( "");
+                break;
+            case -1619:
+                element.setErrorCode( "WFS_ERR_IPM_REFUSEDITEMS");
+                element.setDescription( "");
+                break;
+            case -1620:
+                element.setErrorCode( "WFS_ERR_IPM_ALLBINSFULL");
+                element.setDescription( "");
+                break;
+            case -1621:
+                element.setErrorCode( "WFS_ERR_IPM_FEEDERNOTEMPTY");
+                element.setDescription( "");
+                break;
+            case -1622:
+                element.setErrorCode( "WFS_ERR_IPM_MEDIAREJECTED");
+                element.setDescription( "");
+                break;
+            case -1623:
+                element.setErrorCode( "WFS_ERR_IPM_FEEDERINOPERATIVE");
+                element.setDescription( "");
+                break;
+            case -1624:
+                element.setErrorCode( "WFS_ERR_IPM_MEDIAPRESENT");
+                element.setDescription( "");
+                break;
+            case -1625:
+                element.setErrorCode( "WFS_ERR_IPM_POWERSAVETOOSHORT");
+                element.setDescription( "");
+                break;
+            case -1626:
+                element.setErrorCode( "WFS_ERR_IPM_POWERSAVEMEDIAPRESENT");
+                element.setDescription( "");
+                break;
+            case -1627:
+                element.setErrorCode( "WFS_ERR_IPM_CASHINACTIVE");
+                element.setDescription( "");
+                break;
+            case -1628:
+                element.setErrorCode( "WFS_ERR_IPM_MEDIAINACTIVE");
+                element.setDescription( "");
+                break;
+            case -1629:
+                element.setErrorCode( "WFS_ERR_IPM_COMMANDUNSUPP");
+                element.setDescription( "");
+                break;
+            case -1630:
+                element.setErrorCode( "WFS_ERR_IPM_SYNCHRONIZEUNSUPP");
+                element.setDescription( "");
+                break;
         }
 
         return element;
@@ -2126,6 +2507,248 @@ public class XFSCodes {
                 break;
             case 1505:
                 element.setErrorCode( bExecute ? "WFS_CMD_BCR_SYNCHRONIZE_COMMAND" : "");
+                element.setDescription( "");
+                break;
+
+            ///////////////////////////////////////
+            //Comandos y eventos de ALM
+            case 1101:
+                element.setErrorCode( bExecute ? "WFS_CMD_ALM_SET_ALARM" : "WFS_INF_ALM_STATUS");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_ALM_DEVICE_SET");
+                break;
+            case 1102:
+                element.setErrorCode( bExecute ? "WFS_CMD_ALM_RESET_ALARM" : "WFS_INF_ALM_CAPABILITIES");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_ALM_DEVICE_RESET");
+                break;
+            case 1103:
+                element.setErrorCode( bExecute ? "WFS_CMD_ALM_RESET" : "");
+                element.setDescription( "");
+                break;
+            case 1104:
+                element.setErrorCode( bExecute ? "WFS_CMD_ALM_SYNCHRONIZE_COMMAND" : "");
+                element.setDescription( "");
+                break;
+
+            ///////////////////////////////////////
+            //Comandos y eventos de CAM
+            case 1001:
+                element.setErrorCode( bExecute ? "WFS_CMD_CAM_TAKE_PICTURE" : "WFS_INF_CAM_STATUS");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_CAM_MEDIATHRESHOLD");
+                break;
+            case 1002:
+                element.setErrorCode( bExecute ? "WFS_CMD_CAM_RESET" : "WFS_INF_CAM_CAPABILITIES");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CAM_INVALIDDATA");
+                break;
+            case 1003:
+                element.setErrorCode( bExecute ? "WFS_CMD_CAM_TAKE_PICTURE_EX" : "");
+                element.setDescription( "");
+                break;
+            case 1004:
+                element.setErrorCode( bExecute ? "WFS_CMD_CAM_SYNCHRONIZE_COMMAND" : "");
+                element.setDescription( "");
+                break;
+
+            ///////////////////////////////////////
+            //Comandos y eventos de CEU
+            case 1201:
+                element.setErrorCode( bExecute ? "WFS_CMD_CEU_EMBOSS_CARD" : "WFS_INF_CEU_STATUS");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_INPUTBINTHRESHOLD");
+                break;
+            case 1202:
+                element.setErrorCode( bExecute ? "WFS_CMD_CEU_RESET" : "WFS_INF_CEU_CAPABILITIES");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_OUTPUTBINTHRESHOLD");
+                break;
+            case 1203:
+                element.setErrorCode( bExecute ? "WFS_CMD_CEU_POWER_SAVE_CONTROL" : "WFS_INF_CEU_FORM_LIST");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_RETAINBINTHRESHOLD");
+                break;
+            case 1204:
+                element.setErrorCode( bExecute ? "WFS_CMD_CEU_EMBOSS_CARD_EX" : "WFS_INF_CEU_QUERY_FORM");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CEU_FIELDERROR");
+                break;
+            case 1205:
+                element.setErrorCode( bExecute ? "WFS_CMD_CEU_SUPPLY_REPLENISH" : "WFS_INF_CEU_MEDIA_LIST");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CEU_FIELDWARNING");
+                break;
+            case 1206:
+                element.setErrorCode( bExecute ? "WFS_CMD_CEU_SYNCHRONIZE_COMMAND" : "WFS_INF_CEU_QUERY_MEDIA");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CEU_EMBOSS_FAILURE");
+                break;
+            case 1207:
+                element.setErrorCode( bExecute ? "" : "WFS_INF_CEU_QUERY_FIELD");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_MEDIAREMOVED");
+                break;
+            case 1208:
+                element.setErrorCode( bExecute ? "" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_MEDIADETECTED");
+                break;
+            case 1209:
+                element.setErrorCode( bExecute ? "" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_DEVICEPOSITION");
+                break;
+            case 1210:
+                element.setErrorCode( bExecute ? "" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_POWER_SAVE_CHANGE");
+                break;
+            case 1211:
+                element.setErrorCode( bExecute ? "" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_CEU_TONERTHRESHOLD");
+                break;
+
+            ///////////////////////////////////////
+            //Comandos y eventos de CHK
+            case 501:
+                element.setErrorCode( bExecute ? "WFS_CMD_CHK_PROCESS_FORM" : "WFS_INF_CHK_STATUS");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CHK_NOMEDIA");
+                break;
+            case 502:
+                element.setErrorCode( bExecute ? "WFS_CMD_CHK_RESET" : "WFS_INF_CHK_CAPABILITIES");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CHK_MEDIAINSERTED");
+                break;
+            case 503:
+                element.setErrorCode( bExecute ? "WFS_CMD_CHK_SET_GUIDANCE_LIGHT" : "WFS_INF_CHK_FORM_LIST");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CHK_MEDIAINSERTED");
+                break;
+            case 504:
+                element.setErrorCode( bExecute ? "WFS_CMD_CHK_POWER_SAVE_CONTROL" : "WFS_INF_CHK_MEDIA_LIST");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CHK_FIELDERROR");
+                break;
+            case 505:
+                element.setErrorCode( bExecute ? "WFS_CMD_CHK_SYNCHRONIZE_COMMAND" : "WFS_INF_CHK_QUERY_FORM");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CHK_FIELDWARNING");
+                break;
+            case 506:
+                element.setErrorCode( bExecute ? "" : "WFS_INF_CHK_QUERY_MEDIA");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_CHK_INKTHRESHOLD");
+                break;
+            case 507:
+                element.setErrorCode( bExecute ? "" : "WFS_INF_CHK_QUERY_FIELD");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CHK_MEDIADETECTED");
+                break;
+            case 508:
+                element.setErrorCode( bExecute ? "" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CHK_DEVICEPOSITION");
+                break;
+            case 509:
+                element.setErrorCode( bExecute ? "" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CHK_POWER_SAVE_CHANGE");
+                break;
+
+            ///////////////////////////////////////
+            //Comandos y eventos de CRD
+            case 1401:
+                element.setErrorCode( bExecute ? "WFS_CMD_CRD_DISPENSE_CARD" : "WFS_INF_CRD_STATUS");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CRD_MEDIAREMOVED");
+                break;
+            case 1402:
+                element.setErrorCode( bExecute ? "WFS_CMD_CRD_EJECT_CARD" : "WFS_INF_CRD_CAPABILITIES");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CRD_CARDUNITINFOCHANGED");
+                break;
+            case 1403:
+                element.setErrorCode( bExecute ? "WFS_CMD_CRD_RETAIN_CARD" : "WFS_INF_CRD_CARD_UNIT_INFO");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CRD_MEDIADETECTED");
+                break;
+            case 1404:
+                element.setErrorCode( bExecute ? "WFS_CMD_CRD_RESET" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_CRD_CARDUNITTHRESHOLD");
+                break;
+            case 1405:
+                element.setErrorCode( bExecute ? "WFS_CMD_CRD_SET_GUIDANCE_LIGHT" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CRD_CARDUNITERROR");
+                break;
+            case 1406:
+                element.setErrorCode( bExecute ? "WFS_CMD_CRD_SET_CARD_UNIT_INFO" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CRD_DEVICEPOSITION");
+                break;
+            case 1407:
+                element.setErrorCode( bExecute ? "WFS_CMD_CRD_POWER_SAVE_CONTROL" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CRD_POWER_SAVE_CHANGE");
+                break;
+            case 1408:
+                element.setErrorCode( bExecute ? "WFS_CMD_CRD_SYNCHRONIZE_COMMAND" : "");
+                element.setDescription( "");
+                break;
+
+            ///////////////////////////////////////
+            //Comandos y eventos de IPM
+            case 1601:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_MEDIA_IN" : "WFS_INF_IPM_STATUS");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_NOMEDIA");
+                break;
+            case 1602:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_MEDIA_IN_END" : "WFS_INF_IPM_CAPABILITIES");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_MEDIAINSERTED");
+                break;
+            case 1603:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_MEDIA_IN_ROLLBACK" : "WFS_INF_IPM_CODELINE_MAPPING");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_IPM_MEDIABINTHRESHOLD");
+                break;
+            case 1604:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_READ_IMAGE" : "WFS_INF_IPM_MEDIA_BIN_INFO");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IPM_MEDIABININFOCHANGED");
+                break;
+            case 1605:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_SET_DESTINATION" : "WFS_INF_IPM_TRANSACTION_STATUS");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_MEDIABINERROR");
+                break;
+            case 1606:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_PRESENT_MEDIA" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IPM_MEDIATAKEN");
+                break;
+            case 1607:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_RETRACT_MEDIA" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_IPM_TONERTHRESHOLD");
+                break;
+            case 1608:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_PRINT_TEXT" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_IPM_SCANNERTHRESHOLD");
+                break;
+            case 1609:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_SET_MEDIA_BIN_INFO" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_IPM_INKTHRESHOLD");
+                break;
+            case 1610:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_RESET" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IPM_MEDIADETECTED");
+                break;
+            case 1611:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_SET_GUIDANCE_LIGHT" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_MEDIAPRESENTED");
+                break;
+            case 1612:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_GET_NEXT_ITEM" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_MEDIAREFUSED");
+                break;
+            case 1613:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_ACTION_ITEM" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_MEDIADATA");
+                break;
+            case 1614:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_EXPEL_MEDIA" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_IPM_MICRTHRESHOLD");
+                break;
+            case 1615:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_GET_IMAGE_AFTER_PRINT" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_MEDIAREJECTED");
+                break;
+            case 1616:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_ACCEPT_ITEM" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IPM_DEVICEPOSITION");
+                break;
+            case 1617:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_SUPPLY_REPLENISH" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IPM_POWER_SAVE_CHANGE");
+                break;
+            case 1618:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_POWER_SAVE_CONTROL" : "");
+                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IPM_SHUTTERSTATUSCHANGED");
+                break;
+            case 1619:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_SET_MODE" : "");
+                element.setDescription( "");
+                break;
+            case 1620:
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_SYNCHRONIZE_COMMAND" : "");
                 element.setDescription( "");
                 break;
         }

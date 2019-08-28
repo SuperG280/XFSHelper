@@ -10,9 +10,9 @@ import android.widget.AdapterView;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class DevicesActivity extends AppCompatActivity {
 
@@ -73,6 +73,18 @@ public class DevicesActivity extends AppCompatActivity {
                         break;
                     case Devices.DEV_DEPOSIT:
                         items = XFSCodes.getDepositData();
+                        break;
+                    case Devices.DEV_ALARMS:
+                        break;
+                    case Devices.DEV_CAMERA:
+                        break;
+                    case Devices.DEV_CEU:
+                        break;
+                    case Devices.DEV_CHK:
+                        break;
+                    case Devices.DEV_CRD:
+                        break;
+                    case Devices.DEV_IPM:
                         break;
                 }
 
@@ -159,10 +171,7 @@ public class DevicesActivity extends AppCompatActivity {
                 }
             }
             ListView lv = findViewById( R.id.listView_device_items);
-            String text = getResources().getString(R.string.devices_add_no_selection_text);
-            if( add > 0) {
-                text = String.format( "%s 0x%08X -- %d", getResources().getString(R.string.devices_add_result_text), add, add);
-            }
+            String text = String.format(Locale.getDefault(),"%s 0x%08X -- %d", getResources().getString(R.string.devices_add_result_text), add, add);
 
             Snackbar.make(lv, text, Snackbar.LENGTH_INDEFINITE)
                     .setActionTextColor( DevicesActivity.this.getColor(R.color.colorDeviceSelectedText))
