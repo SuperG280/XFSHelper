@@ -75,16 +75,22 @@ public class DevicesActivity extends AppCompatActivity {
                         items = XFSCodes.getDepositData();
                         break;
                     case Devices.DEV_ALARMS:
+                        items = XFSCodes.getALMData();
                         break;
                     case Devices.DEV_CAMERA:
+                        items = XFSCodes.getCAMData(getApplicationContext());
                         break;
                     case Devices.DEV_CEU:
+                        items = XFSCodes.getCEUData();
                         break;
                     case Devices.DEV_CHK:
+                        items = XFSCodes.getCHKData();
                         break;
                     case Devices.DEV_CRD:
+                        items = XFSCodes.getCRDData();
                         break;
                     case Devices.DEV_IPM:
+                        items = XFSCodes.getIPMData();
                         break;
                 }
 

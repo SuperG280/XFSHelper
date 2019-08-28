@@ -114,7 +114,11 @@ public class AdapterDeviceItem extends BaseAdapter {
         } else {
             holder.constraintLayout.setBackgroundResource(0);
             holder.textView.setTextColor(activity.getColor(R.color.colorDeviceText));
-            holder.textViewResult.setTextColor(activity.getColor(R.color.colorDeviceText));
+            if( deviceItem.getValue().contains("0x")) {
+                holder.textViewResult.setTextColor(activity.getColor(R.color.colorDeviceSelected));
+            } else {
+                holder.textViewResult.setTextColor(activity.getColor(R.color.colorDeviceText));
+            }
         }
 
         return v;
