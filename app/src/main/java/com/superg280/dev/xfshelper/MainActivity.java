@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-        
+
         BtFind.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
