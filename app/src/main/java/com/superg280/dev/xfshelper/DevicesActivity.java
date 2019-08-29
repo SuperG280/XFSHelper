@@ -90,7 +90,7 @@ public class DevicesActivity extends AppCompatActivity {
                         items = XFSCodes.getCRDData();
                         break;
                     case Devices.DEV_IPM:
-                        items = XFSCodes.getIPMData();
+                        items = XFSCodes.getIPMData(getApplicationContext());
                         break;
                 }
 

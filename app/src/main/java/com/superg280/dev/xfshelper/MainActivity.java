@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,6 +41,22 @@ public class MainActivity extends AppCompatActivity {
         final EditText textViewCodeToFind = findViewById( R.id.editText_main_find);
         final Switch switchInfoExec = findViewById( R.id.switch_main_execute);
 
+        textViewCodeToFind.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(textViewCodeToFind.getWindowToken(), 0);
+                    //
+
+                    String strCodeToFind = textViewCodeToFind.getText().toString();
+                    if( !strCodeToFind.isEmpty())
+                        findAndShowResult( strCodeToFind, switchInfoExec.isChecked());
+                    return true;
+                }
+                return false;
+            }
+        });
+        
         BtFind.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
