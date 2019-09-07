@@ -30,4 +30,5 @@
     <string name="action_devices_undo_selection">Undo</string>
     <string name="devices_add_result_text">Suma:</string>
     <string name="devices_add_result_close">Cerrar</string>
+    <string name="devices_find_hint">Buscar</string>
 </resources>
