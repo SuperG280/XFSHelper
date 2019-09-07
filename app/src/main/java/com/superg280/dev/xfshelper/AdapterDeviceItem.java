@@ -10,11 +10,13 @@ import android.widget.TextView;
 
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class AdapterDeviceItem extends BaseAdapter {
 
     private Context activity;
     private ArrayList<XFSDeviceCode> items = new ArrayList<>();
+    private ArrayList<XFSDeviceCode> itemsList;
 
     private class ViewHolder {
         ConstraintLayout constraintLayout;
@@ -25,6 +27,8 @@ public class AdapterDeviceItem extends BaseAdapter {
     AdapterDeviceItem(Context activity, ArrayList<XFSDeviceCode> items) {
         this.activity = activity;
         this.items    = items;
+        this.itemsList = new ArrayList<>();
+        this.itemsList.addAll( items);
     }
 
     @Override
@@ -122,5 +126,21 @@ public class AdapterDeviceItem extends BaseAdapter {
         }
 
         return v;
+    }
+
+    public void filter( String charText) {
+        charText = charText.toLowerCase(Locale.getDefault());
+        items.clear();
+        if( charText.length() == 0) {
+            items.addAll( itemsList);
+        } else {
+            for( XFSDeviceCode code: itemsList) {
+                if( code.getName().toLowerCase( Locale.getDefault()).contains( charText) ||
+                    code.getValue().toLowerCase( Locale.getDefault()).contains( charText)) {
+                    items.add(code);
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 }

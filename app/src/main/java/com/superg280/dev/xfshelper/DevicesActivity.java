@@ -1,14 +1,18 @@
 package com.superg280.dev.xfshelper;
 
+import android.content.Context;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -30,6 +34,25 @@ public class DevicesActivity extends AppCompatActivity {
         final Spinner spinnerDevices = findViewById( R.id.spinner_devices_select);
         DevicesSpinnerAdapter devicesAdapter = new DevicesSpinnerAdapter( getApplicationContext(), Devices.getDev_icons(), Devices.getDev_literales());
 
+
+        final SearchView searchView = findViewById(R.id.searchView_devices);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                //InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                //imm.hideSoftInputFromWindow(searchView.getWindowToken(), 0);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+
+                String text = s;
+                adapterDevice.filter( text);
+
+                return false;
+            }
+        });
 
         spinnerDevices.setAdapter(devicesAdapter);
 
@@ -117,6 +140,14 @@ public class DevicesActivity extends AppCompatActivity {
                         }
                     }
                 });
+                lv.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent) {
+                        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                        imm.hideSoftInputFromWindow(searchView.getWindowToken(), 0);
+                        return false;
+                    }
+                });
             }
 
             @Override
@@ -124,6 +155,8 @@ public class DevicesActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 
     public void hideOrShowActionButton( ) {
@@ -178,7 +211,7 @@ public class DevicesActivity extends AppCompatActivity {
             }
             ListView lv = findViewById( R.id.listView_device_items);
             String text = String.format(Locale.getDefault(),"%s 0x%08X -- %d", getResources().getString(R.string.devices_add_result_text), add, add);
-
+            //lv.smoothScrollToPosition(10);
             Snackbar.make(lv, text, Snackbar.LENGTH_INDEFINITE)
                     .setActionTextColor( DevicesActivity.this.getColor(R.color.colorDeviceSelectedText))
                     .setAction(getResources().getString(R.string.devices_add_result_close), new View.OnClickListener() {
