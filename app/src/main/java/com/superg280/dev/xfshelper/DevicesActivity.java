@@ -68,49 +68,49 @@ public class DevicesActivity extends AppCompatActivity {
                         items = XFSCodes.getManagerData(getApplicationContext());
                         break;
                     case Devices.DEV_DISPENSER:
-                        items = XFSCodes.getDispenserData();
+                        items = XFSCodes.getDispenserData(getApplicationContext());
                         break;
                     case Devices.DEV_CARD:
-                        items = XFSCodes.getCardReaderData();
+                        items = XFSCodes.getCardReaderData(getApplicationContext());
                         break;
                     case Devices.DEV_PINPAD:
-                        items = XFSCodes.getPinPadData();
+                        items = XFSCodes.getPinPadData(getApplicationContext());
                         break;
                     case Devices.DEV_SENSORS:
                         items = XFSCodes.getSensorsData(getApplicationContext());
                         break;
                     case Devices.DEV_NOTESDEPOSIT:
-                        items = XFSCodes.getNoteAcceptorData();
+                        items = XFSCodes.getNoteAcceptorData(getApplicationContext());
                         break;
                     case Devices.DEV_PRINTER:
                         items = XFSCodes.getPrinterData(getApplicationContext());
                         break;
                     case Devices.DEV_VDM:
-                        items = XFSCodes.getVDMData();
+                        items = XFSCodes.getVDMData(getApplicationContext());
                         break;
                     case Devices.DEV_TTU:
-                        items = XFSCodes.getTTUData();
+                        items = XFSCodes.getTTUData(getApplicationContext());
                         break;
                     case Devices.DEV_BARCODE:
-                        items = XFSCodes.getBarCodeData();
+                        items = XFSCodes.getBarCodeData(getApplicationContext());
                         break;
                     case Devices.DEV_DEPOSIT:
-                        items = XFSCodes.getDepositData();
+                        items = XFSCodes.getDepositData(getApplicationContext());
                         break;
                     case Devices.DEV_ALARMS:
-                        items = XFSCodes.getALMData();
+                        items = XFSCodes.getALMData(getApplicationContext());
                         break;
                     case Devices.DEV_CAMERA:
                         items = XFSCodes.getCAMData(getApplicationContext());
                         break;
                     case Devices.DEV_CEU:
-                        items = XFSCodes.getCEUData();
+                        items = XFSCodes.getCEUData(getApplicationContext());
                         break;
                     case Devices.DEV_CHK:
-                        items = XFSCodes.getCHKData();
+                        items = XFSCodes.getCHKData(getApplicationContext());
                         break;
                     case Devices.DEV_CRD:
-                        items = XFSCodes.getCRDData();
+                        items = XFSCodes.getCRDData(getApplicationContext());
                         break;
                     case Devices.DEV_IPM:
                         items = XFSCodes.getIPMData(getApplicationContext());

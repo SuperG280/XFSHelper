@@ -18,11 +18,12 @@
     <string name="devices_generic_indices_of">Array indices</string>
     <string name="devices_sensors_values_of">Values for</string>
     <string name="devices_sensors_flags_for">Flags for</string>
-    <string name="devices_all_evento">Event: "</string>
+    <string name="devices_all_evento">Event: %1$s"</string>
     <string name="devices_manager_messages">Asyn functions Complete Events</string>
     <string name="devices_manager_event_classes">Event classes</string>
     <string name="devices_manager_trace_level">Trace levels</string>
     <string name="devices_manager_error_actions">Error actions</string>
+    <string name="devices_manager_system_events_ids">System Event IDs</string>
     <string name="about_xfs_message">XFS version supported: 3.30</string>
     <string name="about_copyright">SuperG © 2019</string>
     <string name="action_devices_add">Add</string>
@@ -30,4 +31,7 @@
     <string name="devices_add_result_text">Add:</string>
     <string name="devices_add_result_close">Close</string>
     <string name="devices_find_hint">Find</string>
+    <string name="devices_getInfo_cmds">WFSGetInfo categories</string>
+    <string name="devices_execute_cmds">WFSExecute commands</string>
+    <string name="devices_events_cmds">Events</string>
 </resources>

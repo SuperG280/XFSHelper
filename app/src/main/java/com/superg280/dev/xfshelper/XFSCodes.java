@@ -6,6 +6,9 @@ import java.util.ArrayList;
 
 public class XFSCodes {
 
+    private final static int COMMANDS   = 0;
+    private final static int CATEGORIES = 1;
+    private final static int EVENTS     = 2;
 
     public static XFSElement getXFSError( int nCode) {
 
@@ -1696,90 +1699,90 @@ public class XFSCodes {
             //Comandos y eventos de Impresora
             case 101:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_CONTROL_MEDIA" : "WFS_INF_PTR_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_PTR_NOMEDIA");
+                element.setDescription( "WFS_EXEE_PTR_NOMEDIA");
                 break;
             case 102:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_PRINT_FORM" : "WFS_INF_PTR_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_PTR_MEDIAINSERTED");
+                element.setDescription( "WFS_EXEE_PTR_MEDIAINSERTED");
                 break;
             case 103:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_READ_FORM" : "WFS_INF_PTR_FORM_LIST");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_PTR_FIELDERROR");
+                element.setDescription( "WFS_EXEE_PTR_FIELDERROR");
                 break;
             case 104:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_RAW_DATA" : "WFS_INF_PTR_MEDIA_LIST");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_PTR_FIELDWARNING");
+                element.setDescription( "WFS_EXEE_PTR_FIELDWARNING");
                 break;
             case 105:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_MEDIA_EXTENTS" : "WFS_INF_PTR_QUERY_FORM");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_PTR_RETRACTBINTHRESHOLD");
+                element.setDescription( "WFS_USRE_PTR_RETRACTBINTHRESHOLD");
                 break;
             case 106:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_RESET_COUNT" : "WFS_INF_PTR_QUERY_MEDIA");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PTR_MEDIATAKEN");
+                element.setDescription( "WFS_SRVE_PTR_MEDIATAKEN");
                 break;
             case 107:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_READ_IMAGE" : "WFS_INF_PTR_QUERY_FIELD");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_PTR_PAPERTHRESHOLD");
+                element.setDescription( "WFS_USRE_PTR_PAPERTHRESHOLD");
                 break;
             case 108:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_RESET" : "WFS_INF_PTR_CODELINE_MAPPING");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_PTR_TONERTHRESHOLD");
+                element.setDescription( "WFS_USRE_PTR_TONERTHRESHOLD");
                 break;
             case 109:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_RETRACT_MEDIA" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PTR_MEDIAINSERTED");
+                element.setDescription( "WFS_SRVE_PTR_MEDIAINSERTED");
                 break;
             case 110:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_DISPENSE_PAPER" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PTR_MEDIAINSERTED");
+                element.setDescription( "WFS_SRVE_PTR_MEDIAINSERTED");
                 break;
             case 111:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_SET_GUIDANCE_LIGHT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_PTR_INKTHRESHOLD");
+                element.setDescription( "WFS_USRE_PTR_INKTHRESHOLD");
                 break;
             case 112:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_PRINT_RAW_FILE" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PTR_MEDIADETECTED");
+                element.setDescription( "WFS_SRVE_PTR_MEDIADETECTED");
                 break;
             case 113:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_LOAD_DEFINITION" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PTR_RETRACTBINSTATUS");
+                element.setDescription( "WFS_SRVE_PTR_RETRACTBINSTATUS");
                 break;
             case 114:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_SUPPLY_REPLENISH" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_PTR_MEDIAPRESENTED");
+                element.setDescription( "WFS_EXEE_PTR_MEDIAPRESENTED");
                 break;
             case 115:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_POWER_SAVE_CONTROL" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PTR_DEFINITIONLOADED");
+                element.setDescription( "WFS_SRVE_PTR_DEFINITIONLOADED");
                 break;
             case 116:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_CONTROL_PASSBOOK" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_PTR_MEDIAREJECTED");
+                element.setDescription( "WFS_EXEE_PTR_MEDIAREJECTED");
                 break;
             case 117:
                 element.setErrorCode( bExecute ? "WFS_CMD_PTR_SET_BLACK_MARK_MODE" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PTR_MEDIAPRESENTED");
+                element.setDescription( "WFS_SRVE_PTR_MEDIAPRESENTED");
                 break;
             case 118:
-                element.setErrorCode( bExecute ? "WFS_CMD_PTR_SYNCHRONIZE_COMMAND" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PTR_MEDIAAUTORETRACTED");
+                element.setErrorCode( bExecute ? "WFS_CMD_PTR_SYNCHRONIZE_CMD" : "");
+                element.setDescription( "WFS_SRVE_PTR_MEDIAAUTORETRACTED");
                 break;
             case 119:
                 element.setErrorCode("WFS_SRVE_PTR_DEVICEPOSITION");
-                element.setDescription( "");
+                element.setDescription( "WFS_SRVE_PTR_DEVICEPOSITION");
                 break;
             case 120:
                 element.setErrorCode("WFS_SRVE_PTR_POWER_SAVE_CHANGE");
-                element.setDescription( "");
+                element.setDescription( "WFS_SRVE_PTR_POWER_SAVE_CHANGE");
                 break;
 
             ///////////////////////////////////////
             //Comandos y eventos de Lector Tarjetas
             case 201:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_READ_TRACK" : "WFS_INF_IDC_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IDC_INVALIDTRACKDATA");
+                element.setDescription( "WFS_EXEE_IDC_INVALIDTRACKDATA");
                 break;
             case 202:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_WRITE_TRACK" : "WFS_INF_IDC_CAPABILITIES");
@@ -1787,59 +1790,59 @@ public class XFSCodes {
                 break;
             case 203:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_EJECT_CARD" : "WFS_INF_IDC_FORM_LIST");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IDC_MEDIAINSERTED");
+                element.setDescription( "WFS_EXEE_IDC_MEDIAINSERTED");
                 break;
             case 204:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_RETAIN_CARD" : "WFS_INF_IDC_QUERY_FORM");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IDC_MEDIAREMOVED");
+                element.setDescription( "WFS_SRVE_IDC_MEDIAREMOVED");
                 break;
             case 205:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_RESET_COUNT" : "WFS_INF_IDC_QUERY_IFM_IDENTIFIER");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IDC_CARDACTION");
+                element.setDescription( "WFS_SRVE_IDC_CARDACTION");
                 break;
             case 206:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_SETKEY" : "WFS_INF_IDC_EMVCLESS_QUERY_APPS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_IDC_RETAINBINTHRESHOLD");
+                element.setDescription( "WFS_USRE_IDC_RETAINBINTHRESHOLD");
                 break;
             case 207:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_READ_RAW_DATA" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IDC_INVALIDMEDIA");
+                element.setDescription( "WFS_EXEE_IDC_INVALIDMEDIA");
                 break;
             case 208:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_WRITE_RAW_DATA" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IDC_MEDIARETAINED");
+                element.setDescription( "WFS_EXEE_IDC_MEDIARETAINED");
                 break;
             case 209:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_CHIP_IO" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IDC_MEDIADETECTED");
+                element.setDescription( "WFS_SRVE_IDC_MEDIADETECTED");
                 break;
             case 210:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_RESET" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IDC_RETAINBININSERTED");
+                element.setDescription( "WFS_SRVE_IDC_RETAINBININSERTED");
                 break;
             case 211:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_CHIP_POWER" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IDC_RETAINBINREMOVED");
+                element.setDescription( "WFS_SRVE_IDC_RETAINBINREMOVED");
                 break;
             case 212:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_PARSE_DATA" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IDC_INSERTCARD");
+                element.setDescription( "WFS_EXEE_IDC_INSERTCARD");
                 break;
             case 213:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_SET_GUIDANCE_LIGHT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IDC_DEVICEPOSITION");
+                element.setDescription( "WFS_SRVE_IDC_DEVICEPOSITION");
                 break;
             case 214:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_POWER_SAVE_CONTROL" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IDC_POWER_SAVE_CHANGE");
+                element.setDescription( "WFS_SRVE_IDC_POWER_SAVE_CHANGE");
                 break;
             case 215:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_PARK_CARD" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IDC_TRACKDETECTED");
+                element.setDescription( "WFS_EXEE_IDC_TRACKDETECTED");
                 break;
             case 216:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_EMVCLESS_CONFIGURE" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IDC_EMVCLESSREADSTATUS");
+                element.setDescription( "WFS_EXEE_IDC_EMVCLESSREADSTATUS");
                 break;
             case 217:
                 element.setErrorCode( bExecute ? "WFS_CMD_IDC_EMVCLESS_PERFORM_TRANSACTION" : "");
@@ -1850,7 +1853,7 @@ public class XFSCodes {
                 element.setDescription( "");
                 break;
             case 219:
-                element.setErrorCode("WFS_CMD_IDC_SYNCHRONIZE_COMMAND");
+                element.setErrorCode("WFS_CMD_IDC_SYNCHRONIZE_CMD");
                 element.setDescription( "");
                 break;
 
@@ -1858,47 +1861,47 @@ public class XFSCodes {
             //Comandos y eventos de Dispensador
             case 301:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_DENOMINATE" : "WFS_INF_CDM_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CDM_SAFEDOOROPEN");
+                element.setDescription( "WFS_SRVE_CDM_SAFEDOOROPEN");
                 break;
             case 302:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_DISPENSE" : "WFS_INF_CDM_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CDM_SAFEDOORCLOSED");
+                element.setDescription( "WFS_SRVE_CDM_SAFEDOORCLOSED");
                 break;
             case 303:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_PRESENT" : "WFS_INF_CDM_CASH_UNIT_INFO");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_CDM_CASHUNITTHRESHOLD");
+                element.setDescription( "WFS_USRE_CDM_CASHUNITTHRESHOLD");
                 break;
             case 304:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_REJECT" : "WFS_INF_CDM_TELLER_INFO");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CDM_CASHUNITINFOCHANGED");
+                element.setDescription( "WFS_SRVE_CDM_CASHUNITINFOCHANGED");
                 break;
             case 305:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_RETRACT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CDM_TELLERINFOCHANGED");
+                element.setDescription( "WFS_SRVE_CDM_TELLERINFOCHANGED");
                 break;
             case 306:
                 element.setErrorCode( bExecute ? "" : "WFS_INF_CDM_CURRENCY_EXP");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CDM_DELAYEDDISPENSE");
+                element.setDescription( "WFS_EXEE_CDM_DELAYEDDISPENSE");
                 break;
             case 307:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_OPEN_SHUTTER" : "WFS_INF_CDM_MIX_TYPES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CDM_STARTDISPENSE");
+                element.setDescription( "WFS_EXEE_CDM_STARTDISPENSE");
                 break;
             case 308:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_CLOSE_SHUTTER" : "WFS_INF_CDM_MIX_TABLE");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CDM_CASHUNITERROR");
+                element.setDescription( "WFS_EXEE_CDM_CASHUNITERROR");
                 break;
             case 309:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_SET_TELLER_INFO" : "WFS_INF_CDM_PRESENT_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CDM_ITEMSTAKEN");
+                element.setDescription( "WFS_SRVE_CDM_ITEMSTAKEN");
                 break;
             case 310:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_SET_CASH_UNIT_INFO" : "WFS_INF_CDM_GET_ITEM_INFO");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CDM_PARTIALDISPENSE");
+                element.setDescription( "WFS_EXEE_CDM_PARTIALDISPENSE");
                 break;
             case 311:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_START_EXCHANGE" : "WFS_INF_CDM_GET_BLACKLIST");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CDM_SUBDISPENSEOK");
+                element.setDescription( "WFS_EXEE_CDM_SUBDISPENSEOK");
                 break;
             case 312:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_END_EXCHANGE" : "WFS_INF_CDM_GET_ALL_ITEMS_INFO");
@@ -1906,47 +1909,47 @@ public class XFSCodes {
                 break;
             case 313:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_OPEN_SAFE_DOOR" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CDM_ITEMSPRESENTED");
+                element.setDescription( "WFS_SRVE_CDM_ITEMSPRESENTED");
                 break;
             case 314:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CDM_COUNTS_CHANGED");
+                element.setDescription( "WFS_SRVE_CDM_COUNTS_CHANGED");
                 break;
             case 315:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_CALIBRATE_CASH_UNIT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CDM_INCOMPLETEDISPENSE");
+                element.setDescription( "WFS_EXEE_CDM_INCOMPLETEDISPENSE");
                 break;
             case 316:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CDM_NOTEERROR");
+                element.setDescription( "WFS_EXEE_CDM_NOTEERROR");
                 break;
             case 317:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CDM_MEDIADETECTED");
+                element.setDescription( "WFS_SRVE_CDM_MEDIADETECTED");
                 break;
             case 318:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CDM_INPUT_P6");
+                element.setDescription( "WFS_EXEE_CDM_INPUT_P6");
                 break;
             case 319:
                 element.setErrorCode("");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CDM_DEVICEPOSITION");
+                element.setDescription( "WFS_SRVE_CDM_DEVICEPOSITION");
                 break;
             case 320:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_SET_MIX_TABLE" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CDM_POWER_SAVE_CHANGE");
+                element.setDescription( "WFS_SRVE_CDM_POWER_SAVE_CHANGE");
                 break;
             case 321:
                 element.setErrorCode( bExecute ? "WFS_CMD_CDM_RESET" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CDM_INFO_AVAILABLE");
+                element.setDescription( "WFS_EXEE_CDM_INFO_AVAILABLE");
                 break;
             case 322:
                 element.setErrorCode(bExecute ? "WFS_CMD_CDM_TEST_CASH_UNITS" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CDM_INCOMPLETERETRACT");
+                element.setDescription( "WFS_EXEE_CDM_INCOMPLETERETRACT");
                 break;
             case 323:
                 element.setErrorCode(bExecute ? "WFS_CMD_CDM_COUNT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CDM_SHUTTERSTATUSCHANGED");
+                element.setDescription( "WFS_SRVE_CDM_SHUTTERSTATUSCHANGED");
                 break;
             case 324:
                 element.setErrorCode(bExecute ? "WFS_CMD_CDM_SET_GUIDANCE_LIGHT" : "");
@@ -1965,7 +1968,7 @@ public class XFSCodes {
                 element.setDescription( "");
                 break;
             case 328:
-                element.setErrorCode(bExecute ? "WFS_CMD_CDM_SYNCHRONIZE_COMMAND" : "");
+                element.setErrorCode(bExecute ? "WFS_CMD_CDM_SYNCHRONIZE_CMD" : "");
                 element.setDescription( "");
                 break;
 
@@ -1973,47 +1976,47 @@ public class XFSCodes {
             //Comandos y eventos de Pin pad
             case 401:
                 element.setErrorCode( bExecute ? "WFS_CMD_PIN_CRYPT" : "WFS_INF_PIN_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_PIN_KEY");
+                element.setDescription( "WFS_EXEE_PIN_KEY");
                 break;
             case 402:
                 element.setErrorCode( bExecute ? "" : "WFS_INF_PIN_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PIN_INITIALIZED");
+                element.setDescription( "WFS_SRVE_PIN_INITIALIZED");
                 break;
             case 403:
                 element.setErrorCode( bExecute ? "WFS_CMD_PIN_IMPORT_KEY" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PIN_ILLEGAL_KEY_ACCESS");
+                element.setDescription( "WFS_SRVE_PIN_ILLEGAL_KEY_ACCESS");
                 break;
             case 404:
                 element.setErrorCode( bExecute ? "" : "WFS_INF_PIN_KEY_DETAIL");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PIN_OPT_REQUIRED");
+                element.setDescription( "WFS_SRVE_PIN_OPT_REQUIRED");
                 break;
             case 405:
                 element.setErrorCode( bExecute ? "WFS_CMD_PIN_GET_PIN" : "WFS_INF_PIN_FUNCKEY_DETAIL");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PIN_HSM_TDATA_CHANGED");
+                element.setDescription( "WFS_SRVE_PIN_HSM_TDATA_CHANGED");
                 break;
             case 406:
                 element.setErrorCode( bExecute ? "" : "WFS_INF_PIN_HSM_TDATA");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PIN_CERTIFICATE_CHANGE");
+                element.setDescription( "WFS_SRVE_PIN_CERTIFICATE_CHANGE");
                 break;
             case 407:
                 element.setErrorCode( bExecute ? "WFS_CMD_PIN_GET_PINBLOCK" : "WFS_INF_PIN_KEY_DETAIL_EX");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PIN_HSM_CHANGED");
+                element.setDescription( "WFS_SRVE_PIN_HSM_CHANGED");
                 break;
             case 408:
                 element.setErrorCode( bExecute ? "WFS_CMD_PIN_GET_DATA" : "WFS_INF_PIN_SECUREKEY_DETAIL");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_PIN_ENTERDATA");
+                element.setDescription( "WFS_EXEE_PIN_ENTERDATA");
                 break;
             case 409:
                 element.setErrorCode( bExecute ? "WFS_CMD_PIN_INITIALIZATION" : "WFS_INF_PIN_QUERY_LOGICAL_HSM_DETAIL");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PIN_DEVICEPOSITION");
+                element.setDescription( "WFS_SRVE_PIN_DEVICEPOSITION");
                 break;
             case 410:
                 element.setErrorCode( bExecute ? "WFS_CMD_PIN_LOCAL_DES" : "WFS_INF_PIN_QUERY_PCIPTS_DEVICE_ID");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_PIN_POWER_SAVE_CHANGE");
+                element.setDescription( "WFS_SRVE_PIN_POWER_SAVE_CHANGE");
                 break;
             case 411:
                 element.setErrorCode( bExecute ? "WFS_CMD_PIN_LOCAL_EUROCHEQUE" : "WFS_INF_PIN_GET_LAYOUT");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_PIN_LAYOUT");
+                element.setDescription( "WFS_EXEE_PIN_LAYOUT");
                 break;
             case 412:
                 element.setErrorCode( bExecute ? "WFS_CMD_PIN_LOCAL_VISA" : "");
@@ -2184,7 +2187,7 @@ public class XFSCodes {
                 element.setDescription( "");
                 break;
             case 454:
-                element.setErrorCode(bExecute ? "WFS_CMD_PIN_SYNCHRONIZE_COMMAND" : "");
+                element.setErrorCode(bExecute ? "WFS_CMD_PIN_SYNCHRONIZE_CMD" : "");
                 element.setDescription( "");
                 break;
 
@@ -2192,78 +2195,78 @@ public class XFSCodes {
             //Comandos y eventos de Deposito de sobre
             case 601:
                 element.setErrorCode( bExecute ? "WFS_CMD_DEP_ENTRY" : "WFS_INF_DEP_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_DEP_ENVTAKEN");
+                element.setDescription( "WFS_SRVE_DEP_ENVTAKEN");
                 break;
             case 602:
                 element.setErrorCode( bExecute ? "WFS_CMD_DEP_DISPENSE" : "WFS_INF_DEP_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_DEP_ENVDEPOSITED");
+                element.setDescription( "WFS_EXEE_DEP_ENVDEPOSITED");
                 break;
             case 603:
                 element.setErrorCode( bExecute ? "WFS_CMD_DEP_RETRACT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_DEP_DEPOSITERROR");
+                element.setDescription( "WFS_EXEE_DEP_DEPOSITERROR");
                 break;
             case 604:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_DEP_DEPTHRESHOLD");
+                element.setDescription( "WFS_USRE_DEP_DEPTHRESHOLD");
                 break;
             case 605:
                 element.setErrorCode( bExecute ? "WFS_CMD_DEP_RESET_COUNT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_DEP_TONERTHRESHOLD");
+                element.setDescription( "WFS_USRE_DEP_TONERTHRESHOLD");
                 break;
             case 606:
                 element.setErrorCode( bExecute ? "WFS_CMD_DEP_RESET" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_DEP_ENVTHRESHOLD");
+                element.setDescription( "WFS_USRE_DEP_ENVTHRESHOLD");
                 break;
             case 607:
                 element.setErrorCode( bExecute ? "WFS_CMD_DEP_SET_GUIDANCE_LIGHT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_DEP_CONTINSERTED");
+                element.setDescription( "WFS_SRVE_DEP_CONTINSERTED");
                 break;
             case 608:
                 element.setErrorCode( bExecute ? "WFS_CMD_DEP_SUPPLY_REPLENISH" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_DEP_CONTREMOVED");
+                element.setDescription( "WFS_SRVE_DEP_CONTREMOVED");
                 break;
             case 609:
                 element.setErrorCode( bExecute ? "WFS_CMD_DEP_POWER_SAVE_CONTROL" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_DEP_ENVINSERTED");
+                element.setDescription( "WFS_SRVE_DEP_ENVINSERTED");
                 break;
             case 610:
-                element.setErrorCode( bExecute ? "WFS_CMD_DEP_SYNCHRONIZE_COMMAND" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_DEP_MEDIADETECTED");
+                element.setErrorCode( bExecute ? "WFS_CMD_DEP_SYNCHRONIZE_CMD" : "");
+                element.setDescription( "WFS_SRVE_DEP_MEDIADETECTED");
                 break;
             case 611:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_DEP_INSERTDEPOSIT");
+                element.setDescription( "WFS_EXEE_DEP_INSERTDEPOSIT");
                 break;
             case 612:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_DEP_DEVICEPOSITION");
+                element.setDescription( "WFS_SRVE_DEP_DEVICEPOSITION");
                 break;
             case 613:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_DEP_POWER_SAVE_CHANGE");
+                element.setDescription( "WFS_SRVE_DEP_POWER_SAVE_CHANGE");
                 break;
 
             ///////////////////////////////////////
             //Comandos y eventos de TTU
             case 701:
                 element.setErrorCode( bExecute ? "WFS_CMD_TTU_BEEP" : "WFS_INF_TTU_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_TTU_FIELDERROR");
+                element.setDescription( "WFS_EXEE_TTU_FIELDERROR");
                 break;
             case 702:
                 element.setErrorCode( bExecute ? "WFS_CMD_TTU_CLEARSCREEN" : "WFS_INF_TTU_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_TTU_FIELDWARNING");
+                element.setDescription( "WFS_EXEE_TTU_FIELDWARNING");
                 break;
             case 703:
                 element.setErrorCode( bExecute ? "WFS_CMD_TTU_DISPLIGHT" : "WFS_INF_TTU_FORM_LIST");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_TTU_KEY");
+                element.setDescription( "WFS_EXEE_TTU_KEY");
                 break;
             case 704:
                 element.setErrorCode( bExecute ? "WFS_CMD_TTU_SET_LED" : "WFS_INF_TTU_QUERY_FORM");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_TTU_DEVICEPOSITION");
+                element.setDescription( "WFS_SRVE_TTU_DEVICEPOSITION");
                 break;
             case 705:
                 element.setErrorCode( bExecute ? "WFS_CMD_TTU_SET_RESOLUTION" : "WFS_INF_TTU_QUERY_FIELD");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_TTU_POWER_SAVE_CHANGE");
+                element.setDescription( "WFS_SRVE_TTU_POWER_SAVE_CHANGE");
                 break;
             case 706:
                 element.setErrorCode( bExecute ? "WFS_CMD_TTU_WRITE_FORM" : "WFS_INF_TTU_KEY_DETAIL");
@@ -2298,7 +2301,7 @@ public class XFSCodes {
                 element.setDescription( "");
                 break;
             case 714:
-                element.setErrorCode( bExecute ? "WFS_CMD_TTU_SYNCHRONIZE_COMMAND" : "");
+                element.setErrorCode( bExecute ? "WFS_CMD_TTU_SYNCHRONIZE_CMD" : "");
                 element.setDescription( "");
                 break;
 
@@ -2306,15 +2309,15 @@ public class XFSCodes {
             //Comandos y eventos de SIU
             case 801:
                 element.setErrorCode( bExecute ? "WFS_CMD_SIU_ENABLE_EVENTS" : "WFS_INF_SIU_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_SIU_PORT_STATUS");
+                element.setDescription( "WFS_SRVE_SIU_PORT_STATUS");
                 break;
             case 802:
                 element.setErrorCode( bExecute ? "WFS_CMD_SIU_SET_PORTS" : "WFS_INF_SIU_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_SIU_PORT_ERROR");
+                element.setDescription( "WFS_EXEE_SIU_PORT_ERROR");
                 break;
             case 803:
                 element.setErrorCode( bExecute ? "WFS_CMD_SIU_SET_DOOR" : "WFS_INF_SIU_GET_AUTOSTARTUP_TIME");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_SIU_POWER_SAVE_CHANGE");
+                element.setDescription( "WFS_SRVE_SIU_POWER_SAVE_CHANGE");
                 break;
             case 804:
                 element.setErrorCode( bExecute ? "WFS_CMD_SIU_SET_INDICATOR" : "");
@@ -2341,7 +2344,7 @@ public class XFSCodes {
                 element.setDescription( "");
                 break;
             case 810:
-                element.setErrorCode( bExecute ? "WFS_CMD_SIU_SYNCHRONIZE_COMMAND" : "");
+                element.setErrorCode( bExecute ? "WFS_CMD_SIU_SYNCHRONIZE_CMD" : "");
                 element.setDescription( "");
                 break;
 
@@ -2349,114 +2352,114 @@ public class XFSCodes {
             //Comandos y eventos de VDM
             case 901:
                 element.setErrorCode( bExecute ? "WFS_CMD_VDM_ENTER_MODE_REQ" : "WFS_INF_VDM_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_VDM_ENTER_MODE_REQ");
+                element.setDescription( "WFS_SRVE_VDM_ENTER_MODE_REQ");
                 break;
             case 902:
                 element.setErrorCode( bExecute ? "WFS_CMD_VDM_ENTER_MODE_ACK" : "WFS_INF_VDM_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_VDM_EXIT_MODE_REQ");
+                element.setDescription( "WFS_SRVE_VDM_EXIT_MODE_REQ");
                 break;
             case 903:
                 element.setErrorCode( bExecute ? "WFS_CMD_VDM_EXIT_MODE_REQ" : "WFS_INF_VDM_ACTIVE_INTERFACE");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SYSE_VDM_MODEENTERED");
+                element.setDescription( "WFS_SYSE_VDM_MODEENTERED");
                 break;
             case 904:
                 element.setErrorCode( bExecute ? "WFS_CMD_VDM_EXIT_MODE_ACK" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SYSE_VDM_MODEEXITED");
+                element.setDescription( "WFS_SYSE_VDM_MODEEXITED");
                 break;
             case 905:
                 element.setErrorCode( bExecute ? "WFS_CMD_VDM_SET_ACTIVE_INTERFACE" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_VDM_INTERFACE_CHANGED");
+                element.setDescription( "WFS_SRVE_VDM_INTERFACE_CHANGED");
                 break;
 
             ///////////////////////////////////////
             //Comandos y eventos del Ingresador de efectivo
             case 1301:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_CASH_IN_START" : "WFS_INF_CIM_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CIM_SAFEDOOROPEN");
+                element.setDescription( "WFS_SRVE_CIM_SAFEDOOROPEN");
                 break;
             case 1302:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_CASH_IN" : "WFS_INF_CIM_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CIM_SAFEDOORCLOSED");
+                element.setDescription( "WFS_SRVE_CIM_SAFEDOORCLOSED");
                 break;
             case 1303:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_CASH_IN_END" : "WFS_INF_CIM_CASH_UNIT_INFO");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_CIM_CASHUNITTHRESHOLD");
+                element.setDescription( "WFS_USRE_CIM_CASHUNITTHRESHOLD");
                 break;
             case 1304:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_CASH_IN_ROLLBACK" : "WFS_INF_CIM_TELLER_INFO");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CIM_CASHUNITINFOCHANGED");
+                element.setDescription( "WFS_SRVE_CIM_CASHUNITINFOCHANGED");
                 break;
             case 1305:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_RETRACT" : "WFS_INF_CIM_CURRENCY_EXP");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CIM_TELLERINFOCHANGED");
+                element.setDescription( "WFS_SRVE_CIM_TELLERINFOCHANGED");
                 break;
             case 1306:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_OPEN_SHUTTER" : "WFS_INF_CIM_BANKNOTE_TYPES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CIM_CASHUNITERROR");
+                element.setDescription( "WFS_EXEE_CIM_CASHUNITERROR");
                 break;
             case 1307:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_CLOSE_SHUTTER" : "WFS_INF_CIM_CASH_IN_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CIM_ITEMSTAKEN");
+                element.setDescription( "WFS_SRVE_CIM_ITEMSTAKEN");
                 break;
             case 1308:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_SET_TELLER_INFO" : "WFS_INF_CIM_GET_P6_INFO");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CIM_COUNTS_CHANGED");
+                element.setDescription( "WFS_SRVE_CIM_COUNTS_CHANGED");
                 break;
             case 1309:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_SET_CASH_UNIT_INFO" : "WFS_INF_CIM_GET_P6_SIGNATURE");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CIM_INPUTREFUSE");
+                element.setDescription( "WFS_EXEE_CIM_INPUTREFUSE");
                 break;
             case 1310:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_START_EXCHANGE" : "WFS_INF_CIM_GET_ITEM_INFO");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CIM_ITEMSPRESENTED");
+                element.setDescription( "WFS_SRVE_CIM_ITEMSPRESENTED");
                 break;
             case 1311:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_END_EXCHANGE" : "WFS_INF_CIM_POSITION_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CIM_ITEMSINSERTED");
+                element.setDescription( "WFS_SRVE_CIM_ITEMSINSERTED");
                 break;
             case 1312:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_OPEN_SAFE_DOOR" : "WFS_INF_CIM_REPLENISH_TARGET");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CIM_NOTEERROR");
+                element.setDescription( "WFS_EXEE_CIM_NOTEERROR");
                 break;
             case 1313:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_RESET" : "WFS_INF_CIM_DEVICELOCK_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CIM_SUBCASHIN");
+                element.setDescription( "WFS_EXEE_CIM_SUBCASHIN");
                 break;
             case 1314:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_CONFIGURE_CASH_IN_UNITS" : "WFS_INF_CIM_CASH_UNIT_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CIM_MEDIADETECTED");
+                element.setDescription( "WFS_SRVE_CIM_MEDIADETECTED");
                 break;
             case 1315:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_CONFIGURE_NOTETYPES" : "WFS_INF_CIM_DEPLETE_SOURCE");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CIM_INPUT_P6");
+                element.setDescription( "WFS_EXEE_CIM_INPUT_P6");
                 break;
             case 1316:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_CREATE_P6_SIGNATURE" : "WFS_INF_CIM_GET_ALL_ITEMS_INFO");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CIM_INFO_AVAILABLE");
+                element.setDescription( "WFS_EXEE_CIM_INFO_AVAILABLE");
                 break;
             case 1317:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_SET_GUIDANCE_LIGHT" : "WFS_INF_CIM_GET_BLACKLIST");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CIM_INSERTITEMS");
+                element.setDescription( "WFS_EXEE_CIM_INSERTITEMS");
                 break;
             case 1318:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_CONFIGURE_NOTE_READER" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CIM_DEVICEPOSITION");
+                element.setDescription( "WFS_SRVE_CIM_DEVICEPOSITION");
                 break;
             case 1319:
                 element.setErrorCode(bExecute ? "WFS_CMD_CIM_COMPARE_P6_SIGNATURE" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CIM_POWER_SAVE_CHANGE");
+                element.setDescription( "WFS_SRVE_CIM_POWER_SAVE_CHANGE");
                 break;
             case 1320:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_POWER_SAVE_CONTROL" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CIM_INCOMPLETEREPLENISH");
+                element.setDescription( "WFS_EXEE_CIM_INCOMPLETEREPLENISH");
                 break;
             case 1321:
                 element.setErrorCode( bExecute ? "WFS_CMD_CIM_REPLENISH" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CIM_INCOMPLETEDEPLETE");
+                element.setDescription( "WFS_EXEE_CIM_INCOMPLETEDEPLETE");
                 break;
             case 1322:
                 element.setErrorCode(bExecute ? "WFS_CMD_CIM_SET_CASH_IN_LIMIT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CIM_SHUTTERSTATUSCHANGED");
+                element.setDescription( "WFS_SRVE_CIM_SHUTTERSTATUSCHANGED");
                 break;
             case 1323:
                 element.setErrorCode(bExecute ? "WFS_CMD_CIM_CASH_UNIT_COUNT" : "");
@@ -2483,7 +2486,7 @@ public class XFSCodes {
                 element.setDescription( "");
                 break;
             case 1329:
-                element.setErrorCode(bExecute ? "WFS_CMD_CIM_SYNCHRONIZE_COMMAND" : "");
+                element.setErrorCode(bExecute ? "WFS_CMD_CIM_SYNCHRONIZE_CMD" : "");
                 element.setDescription( "");
                 break;
 
@@ -2491,11 +2494,11 @@ public class XFSCodes {
             //Comandos y eventos del Codigo de barras
             case 1501:
                 element.setErrorCode( bExecute ? "WFS_CMD_BCR_READ" : "WFS_INF_BCR_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_BCR_DEVICEPOSITION");
+                element.setDescription( "WFS_SRVE_BCR_DEVICEPOSITION");
                 break;
             case 1502:
                 element.setErrorCode( bExecute ? "WFS_CMD_BCR_RESET" : "WFS_INF_BCR_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_BCR_POWER_SAVE_CHANGE");
+                element.setDescription( "WFS_SRVE_BCR_POWER_SAVE_CHANGE");
                 break;
             case 1503:
                 element.setErrorCode( bExecute ? "WFS_CMD_BCR_SET_GUIDANCE_LIGHT" : "");
@@ -2506,7 +2509,7 @@ public class XFSCodes {
                 element.setDescription( "");
                 break;
             case 1505:
-                element.setErrorCode( bExecute ? "WFS_CMD_BCR_SYNCHRONIZE_COMMAND" : "");
+                element.setErrorCode( bExecute ? "WFS_CMD_BCR_SYNCHRONIZE_CMD" : "");
                 element.setDescription( "");
                 break;
 
@@ -2514,18 +2517,18 @@ public class XFSCodes {
             //Comandos y eventos de ALM
             case 1101:
                 element.setErrorCode( bExecute ? "WFS_CMD_ALM_SET_ALARM" : "WFS_INF_ALM_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_ALM_DEVICE_SET");
+                element.setDescription( "WFS_SRVE_ALM_DEVICE_SET");
                 break;
             case 1102:
                 element.setErrorCode( bExecute ? "WFS_CMD_ALM_RESET_ALARM" : "WFS_INF_ALM_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_ALM_DEVICE_RESET");
+                element.setDescription( "WFS_SRVE_ALM_DEVICE_RESET");
                 break;
             case 1103:
                 element.setErrorCode( bExecute ? "WFS_CMD_ALM_RESET" : "");
                 element.setDescription( "");
                 break;
             case 1104:
-                element.setErrorCode( bExecute ? "WFS_CMD_ALM_SYNCHRONIZE_COMMAND" : "");
+                element.setErrorCode( bExecute ? "WFS_CMD_ALM_SYNCHRONIZE_CMD" : "");
                 element.setDescription( "");
                 break;
 
@@ -2533,18 +2536,18 @@ public class XFSCodes {
             //Comandos y eventos de CAM
             case 1001:
                 element.setErrorCode( bExecute ? "WFS_CMD_CAM_TAKE_PICTURE" : "WFS_INF_CAM_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_CAM_MEDIATHRESHOLD");
+                element.setDescription( "WFS_USRE_CAM_MEDIATHRESHOLD");
                 break;
             case 1002:
                 element.setErrorCode( bExecute ? "WFS_CMD_CAM_RESET" : "WFS_INF_CAM_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CAM_INVALIDDATA");
+                element.setDescription( "WFS_EXEE_CAM_INVALIDDATA");
                 break;
             case 1003:
                 element.setErrorCode( bExecute ? "WFS_CMD_CAM_TAKE_PICTURE_EX" : "");
                 element.setDescription( "");
                 break;
             case 1004:
-                element.setErrorCode( bExecute ? "WFS_CMD_CAM_SYNCHRONIZE_COMMAND" : "");
+                element.setErrorCode( bExecute ? "WFS_CMD_CAM_SYNCHRONIZE_CMD" : "");
                 element.setDescription( "");
                 break;
 
@@ -2552,120 +2555,120 @@ public class XFSCodes {
             //Comandos y eventos de CEU
             case 1201:
                 element.setErrorCode( bExecute ? "WFS_CMD_CEU_EMBOSS_CARD" : "WFS_INF_CEU_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_INPUTBINTHRESHOLD");
+                element.setDescription( "WFS_SRVE_CEU_INPUTBINTHRESHOLD");
                 break;
             case 1202:
                 element.setErrorCode( bExecute ? "WFS_CMD_CEU_RESET" : "WFS_INF_CEU_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_OUTPUTBINTHRESHOLD");
+                element.setDescription( "WFS_SRVE_CEU_OUTPUTBINTHRESHOLD");
                 break;
             case 1203:
                 element.setErrorCode( bExecute ? "WFS_CMD_CEU_POWER_SAVE_CONTROL" : "WFS_INF_CEU_FORM_LIST");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_RETAINBINTHRESHOLD");
+                element.setDescription( "WFS_SRVE_CEU_RETAINBINTHRESHOLD");
                 break;
             case 1204:
                 element.setErrorCode( bExecute ? "WFS_CMD_CEU_EMBOSS_CARD_EX" : "WFS_INF_CEU_QUERY_FORM");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CEU_FIELDERROR");
+                element.setDescription( "WFS_EXEE_CEU_FIELDERROR");
                 break;
             case 1205:
                 element.setErrorCode( bExecute ? "WFS_CMD_CEU_SUPPLY_REPLENISH" : "WFS_INF_CEU_MEDIA_LIST");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CEU_FIELDWARNING");
+                element.setDescription( "WFS_EXEE_CEU_FIELDWARNING");
                 break;
             case 1206:
-                element.setErrorCode( bExecute ? "WFS_CMD_CEU_SYNCHRONIZE_COMMAND" : "WFS_INF_CEU_QUERY_MEDIA");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CEU_EMBOSS_FAILURE");
+                element.setErrorCode( bExecute ? "WFS_CMD_CEU_SYNCHRONIZE_CMD" : "WFS_INF_CEU_QUERY_MEDIA");
+                element.setDescription( "WFS_EXEE_CEU_EMBOSS_FAILURE");
                 break;
             case 1207:
                 element.setErrorCode( bExecute ? "" : "WFS_INF_CEU_QUERY_FIELD");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_MEDIAREMOVED");
+                element.setDescription( "WFS_SRVE_CEU_MEDIAREMOVED");
                 break;
             case 1208:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_MEDIADETECTED");
+                element.setDescription( "WFS_SRVE_CEU_MEDIADETECTED");
                 break;
             case 1209:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_DEVICEPOSITION");
+                element.setDescription( "WFS_SRVE_CEU_DEVICEPOSITION");
                 break;
             case 1210:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CEU_POWER_SAVE_CHANGE");
+                element.setDescription( "WFS_SRVE_CEU_POWER_SAVE_CHANGE");
                 break;
             case 1211:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_CEU_TONERTHRESHOLD");
+                element.setDescription( "WFS_USRE_CEU_TONERTHRESHOLD");
                 break;
 
             ///////////////////////////////////////
             //Comandos y eventos de CHK
             case 501:
                 element.setErrorCode( bExecute ? "WFS_CMD_CHK_PROCESS_FORM" : "WFS_INF_CHK_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CHK_NOMEDIA");
+                element.setDescription( "WFS_EXEE_CHK_NOMEDIA");
                 break;
             case 502:
                 element.setErrorCode( bExecute ? "WFS_CMD_CHK_RESET" : "WFS_INF_CHK_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CHK_MEDIAINSERTED");
+                element.setDescription( "WFS_EXEE_CHK_MEDIAINSERTED");
                 break;
             case 503:
                 element.setErrorCode( bExecute ? "WFS_CMD_CHK_SET_GUIDANCE_LIGHT" : "WFS_INF_CHK_FORM_LIST");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CHK_MEDIAINSERTED");
+                element.setDescription( "WFS_SRVE_CHK_MEDIAINSERTED");
                 break;
             case 504:
                 element.setErrorCode( bExecute ? "WFS_CMD_CHK_POWER_SAVE_CONTROL" : "WFS_INF_CHK_MEDIA_LIST");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CHK_FIELDERROR");
+                element.setDescription( "WFS_EXEE_CHK_FIELDERROR");
                 break;
             case 505:
-                element.setErrorCode( bExecute ? "WFS_CMD_CHK_SYNCHRONIZE_COMMAND" : "WFS_INF_CHK_QUERY_FORM");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CHK_FIELDWARNING");
+                element.setErrorCode( bExecute ? "WFS_CMD_CHK_SYNCHRONIZE_CMD" : "WFS_INF_CHK_QUERY_FORM");
+                element.setDescription( "WFS_EXEE_CHK_FIELDWARNING");
                 break;
             case 506:
                 element.setErrorCode( bExecute ? "" : "WFS_INF_CHK_QUERY_MEDIA");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_CHK_INKTHRESHOLD");
+                element.setDescription( "WFS_USRE_CHK_INKTHRESHOLD");
                 break;
             case 507:
                 element.setErrorCode( bExecute ? "" : "WFS_INF_CHK_QUERY_FIELD");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CHK_MEDIADETECTED");
+                element.setDescription( "WFS_SRVE_CHK_MEDIADETECTED");
                 break;
             case 508:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CHK_DEVICEPOSITION");
+                element.setDescription( "WFS_SRVE_CHK_DEVICEPOSITION");
                 break;
             case 509:
                 element.setErrorCode( bExecute ? "" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CHK_POWER_SAVE_CHANGE");
+                element.setDescription( "WFS_SRVE_CHK_POWER_SAVE_CHANGE");
                 break;
 
             ///////////////////////////////////////
             //Comandos y eventos de CRD
             case 1401:
                 element.setErrorCode( bExecute ? "WFS_CMD_CRD_DISPENSE_CARD" : "WFS_INF_CRD_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CRD_MEDIAREMOVED");
+                element.setDescription( "WFS_SRVE_CRD_MEDIAREMOVED");
                 break;
             case 1402:
                 element.setErrorCode( bExecute ? "WFS_CMD_CRD_EJECT_CARD" : "WFS_INF_CRD_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CRD_CARDUNITINFOCHANGED");
+                element.setDescription( "WFS_SRVE_CRD_CARDUNITINFOCHANGED");
                 break;
             case 1403:
                 element.setErrorCode( bExecute ? "WFS_CMD_CRD_RETAIN_CARD" : "WFS_INF_CRD_CARD_UNIT_INFO");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CRD_MEDIADETECTED");
+                element.setDescription( "WFS_SRVE_CRD_MEDIADETECTED");
                 break;
             case 1404:
                 element.setErrorCode( bExecute ? "WFS_CMD_CRD_RESET" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_CRD_CARDUNITTHRESHOLD");
+                element.setDescription( "WFS_USRE_CRD_CARDUNITTHRESHOLD");
                 break;
             case 1405:
                 element.setErrorCode( bExecute ? "WFS_CMD_CRD_SET_GUIDANCE_LIGHT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_CRD_CARDUNITERROR");
+                element.setDescription( "WFS_EXEE_CRD_CARDUNITERROR");
                 break;
             case 1406:
                 element.setErrorCode( bExecute ? "WFS_CMD_CRD_SET_CARD_UNIT_INFO" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CRD_DEVICEPOSITION");
+                element.setDescription( "WFS_SRVE_CRD_DEVICEPOSITION");
                 break;
             case 1407:
                 element.setErrorCode( bExecute ? "WFS_CMD_CRD_POWER_SAVE_CONTROL" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_CRD_POWER_SAVE_CHANGE");
+                element.setDescription( "WFS_SRVE_CRD_POWER_SAVE_CHANGE");
                 break;
             case 1408:
-                element.setErrorCode( bExecute ? "WFS_CMD_CRD_SYNCHRONIZE_COMMAND" : "");
+                element.setErrorCode( bExecute ? "WFS_CMD_CRD_SYNCHRONIZE_CMD" : "");
                 element.setDescription( "");
                 break;
 
@@ -2673,82 +2676,82 @@ public class XFSCodes {
             //Comandos y eventos de IPM
             case 1601:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_MEDIA_IN" : "WFS_INF_IPM_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_NOMEDIA");
+                element.setDescription( "WFS_EXEE_IPM_NOMEDIA");
                 break;
             case 1602:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_MEDIA_IN_END" : "WFS_INF_IPM_CAPABILITIES");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_MEDIAINSERTED");
+                element.setDescription( "WFS_EXEE_IPM_MEDIAINSERTED");
                 break;
             case 1603:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_MEDIA_IN_ROLLBACK" : "WFS_INF_IPM_CODELINE_MAPPING");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_IPM_MEDIABINTHRESHOLD");
+                element.setDescription( "WFS_USRE_IPM_MEDIABINTHRESHOLD");
                 break;
             case 1604:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_READ_IMAGE" : "WFS_INF_IPM_MEDIA_BIN_INFO");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IPM_MEDIABININFOCHANGED");
+                element.setDescription( "WFS_SRVE_IPM_MEDIABININFOCHANGED");
                 break;
             case 1605:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_SET_DESTINATION" : "WFS_INF_IPM_TRANSACTION_STATUS");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_MEDIABINERROR");
+                element.setDescription( "WFS_EXEE_IPM_MEDIABINERROR");
                 break;
             case 1606:
-                element.setErrorCode( bExecute ? "WFS_CMD_IPM_PRESENT_MEDIA" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IPM_MEDIATAKEN");
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_PRESENT_MEDIA" : "WFS_INF_IPM_MEDIA_BIN_CAPABILITIES");
+                element.setDescription( "WFS_SRVE_IPM_MEDIATAKEN");
                 break;
             case 1607:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_RETRACT_MEDIA" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_IPM_TONERTHRESHOLD");
+                element.setDescription( "WFS_USRE_IPM_TONERTHRESHOLD");
                 break;
             case 1608:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_PRINT_TEXT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_IPM_SCANNERTHRESHOLD");
+                element.setDescription( "WFS_USRE_IPM_SCANNERTHRESHOLD");
                 break;
             case 1609:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_SET_MEDIA_BIN_INFO" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_IPM_INKTHRESHOLD");
+                element.setDescription( "WFS_USRE_IPM_INKTHRESHOLD");
                 break;
             case 1610:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_RESET" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IPM_MEDIADETECTED");
+                element.setDescription( "WFS_SRVE_IPM_MEDIADETECTED");
                 break;
             case 1611:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_SET_GUIDANCE_LIGHT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_MEDIAPRESENTED");
+                element.setDescription( "WFS_EXEE_IPM_MEDIAPRESENTED");
                 break;
             case 1612:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_GET_NEXT_ITEM" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_MEDIAREFUSED");
+                element.setDescription( "WFS_EXEE_IPM_MEDIAREFUSED");
                 break;
             case 1613:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_ACTION_ITEM" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_MEDIADATA");
+                element.setDescription( "WFS_EXEE_IPM_MEDIADATA");
                 break;
             case 1614:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_EXPEL_MEDIA" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_USRE_IPM_MICRTHRESHOLD");
+                element.setDescription( "WFS_USRE_IPM_MICRTHRESHOLD");
                 break;
             case 1615:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_GET_IMAGE_AFTER_PRINT" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_EXEE_IPM_MEDIAREJECTED");
+                element.setDescription( "WFS_EXEE_IPM_MEDIAREJECTED");
                 break;
             case 1616:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_ACCEPT_ITEM" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IPM_DEVICEPOSITION");
+                element.setDescription( "WFS_SRVE_IPM_DEVICEPOSITION");
                 break;
             case 1617:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_SUPPLY_REPLENISH" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IPM_POWER_SAVE_CHANGE");
+                element.setDescription( "WFS_SRVE_IPM_POWER_SAVE_CHANGE");
                 break;
             case 1618:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_POWER_SAVE_CONTROL" : "");
-                element.setDescription( context.getString(R.string.devices_all_evento) + "WFS_SRVE_IPM_SHUTTERSTATUSCHANGED");
+                element.setDescription( "WFS_SRVE_IPM_SHUTTERSTATUSCHANGED");
                 break;
             case 1619:
                 element.setErrorCode( bExecute ? "WFS_CMD_IPM_SET_MODE" : "");
                 element.setDescription( "");
                 break;
             case 1620:
-                element.setErrorCode( bExecute ? "WFS_CMD_IPM_SYNCHRONIZE_COMMAND" : "");
+                element.setErrorCode( bExecute ? "WFS_CMD_IPM_SYNCHRONIZE_CMD" : "");
                 element.setDescription( "");
                 break;
         }
@@ -2756,12 +2759,45 @@ public class XFSCodes {
         return element;
     }
 
-    public static ArrayList<XFSDeviceCode> getDispenserData() {
+    public static void getDeviceCommandCategory( ArrayList<XFSDeviceCode> array, int nInitCmd, int nEndCmd, int  nType, Context context) {
+
+        array.add(new XFSDeviceCode("", ""));
+        if (nType == COMMANDS) {
+            array.add(new XFSDeviceCode(context.getString(R.string.devices_execute_cmds), ""));
+        } else if (nType == CATEGORIES) {
+            array.add(new XFSDeviceCode(context.getString(R.string.devices_getInfo_cmds), ""));
+        } else {
+            array.add(new XFSDeviceCode(context.getString(R.string.devices_events_cmds), ""));
+        }
+
+        boolean bExecute = ( nType == COMMANDS);
+
+        for( int i = nInitCmd; i <= nEndCmd; i++ ) {
+            XFSElement element = getXFSCommandResult( i, bExecute, context);
+            if( nType == COMMANDS || nType == CATEGORIES) {
+                if( !element.getErrorCode().isEmpty()) {
+                    String temp = element.getErrorCode().substring(4);
+                    array.add(new XFSDeviceCode("\t" + temp, "" + i));
+                }
+            } else {
+                if( !element.getDescription().isEmpty()) {
+                    String temp = element.getDescription().substring( 4);
+                    array.add( new XFSDeviceCode( "\t" + temp, "" + i));
+                }
+            }
+        }
+    }
+
+    public static ArrayList<XFSDeviceCode> getDispenserData( Context context) {
 
         ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 
         deviceCodes.add( new XFSDeviceCode( "WFSCDMCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "\tWFS_SERVICE_CLASS_CDM"	, "3"));
+
+        getDeviceCommandCategory( deviceCodes, 301, 312, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 301, 328, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 301, 323, EVENTS, context);
 
         deviceCodes.add( new XFSDeviceCode("", ""));
         deviceCodes.add( new XFSDeviceCode( "WFSCDMSTATUS.fwDevice"			, ""));
@@ -2922,12 +2958,16 @@ public class XFSCodes {
         return deviceCodes;
     }
 
-    public static ArrayList<XFSDeviceCode> getNoteAcceptorData() {
+    public static ArrayList<XFSDeviceCode> getNoteAcceptorData( Context context) {
 
         ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 
         deviceCodes.add( new XFSDeviceCode( "WFSCIMCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "\tWFS_SERVICE_CLASS_CIM"	    , "13"));
+
+        getDeviceCommandCategory( deviceCodes, 1301, 1317, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 1301, 1329, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 1301, 1322, EVENTS, context);
 
         deviceCodes.add( new XFSDeviceCode("", ""));
         deviceCodes.add( new XFSDeviceCode( "WFSCIMSTATUS.fwDevice"		, ""));
@@ -3279,12 +3319,16 @@ public class XFSCodes {
         return deviceCodes;
     }
 	
-	public static ArrayList<XFSDeviceCode> getCardReaderData() {
+	public static ArrayList<XFSDeviceCode> getCardReaderData( Context context) {
 
         ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 
         deviceCodes.add( new XFSDeviceCode( "WFSIDCCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "\tWFS_SERVICE_CLASS_IDC"	, "2"));
+
+        getDeviceCommandCategory( deviceCodes, 201, 206, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 201, 219, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 201, 216, EVENTS, context);
 
         deviceCodes.add( new XFSDeviceCode("", ""));
         deviceCodes.add( new XFSDeviceCode( "WFSIDCSTATUS.fwDevice"	, ""));
@@ -3577,7 +3621,11 @@ public class XFSCodes {
 		
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUCAPS.wClass"		, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_SIU"	, "8"));
-		
+
+        getDeviceCommandCategory( deviceCodes, 801, 803, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 801, 810, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 801, 803, EVENTS, context);
+
 		deviceCodes.add( new XFSDeviceCode("", ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSSIUSTATUS.fwDevice"	, ""));
         deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"			    , "0"));
@@ -3994,13 +4042,17 @@ public class XFSCodes {
 		return deviceCodes;
 	}
 	
-	public static ArrayList<XFSDeviceCode> getPinPadData() {
+	public static ArrayList<XFSDeviceCode> getPinPadData( Context context) {
 
         ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 		
 		deviceCodes.add( new XFSDeviceCode( "WFSPINCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_PIN"	, "4"));
-		
+
+        getDeviceCommandCategory( deviceCodes, 401, 411, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 401, 454, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 401, 411, EVENTS, context);
+
 		deviceCodes.add( new XFSDeviceCode("", ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSPINSTATUS.fwDevice"			, ""));
         deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"			, "0"));
@@ -4428,7 +4480,11 @@ public class XFSCodes {
 		
 		deviceCodes.add( new XFSDeviceCode( "WFSPTRCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_PTR"		, "1"));
-		
+
+        getDeviceCommandCategory( deviceCodes, 101, 108, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 101, 118, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 101, 120, EVENTS, context);
+
 		deviceCodes.add( new XFSDeviceCode("", ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSPTRSTATUS.fwDevice"			, ""));
         deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"			, "0"));
@@ -4830,13 +4886,17 @@ public class XFSCodes {
 		return deviceCodes;
 	}
 	
-	public static ArrayList<XFSDeviceCode> getTTUData( ) {
+	public static ArrayList<XFSDeviceCode> getTTUData(Context context) {
 		
 		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 		
 		deviceCodes.add( new XFSDeviceCode( "WFSTTUCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_TTU"		, "7"));
-		
+
+        getDeviceCommandCategory( deviceCodes, 701, 706, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 701, 714, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 701, 705, EVENTS, context);
+
 		deviceCodes.add( new XFSDeviceCode("", ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSTTUSTATUS.fwDevice"			, ""));
         deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"			, "0"));
@@ -5035,13 +5095,17 @@ public class XFSCodes {
 		return deviceCodes;
 	}
 	
-	public static ArrayList<XFSDeviceCode> getVDMData( ) {
+	public static ArrayList<XFSDeviceCode> getVDMData( Context context) {
 		
 		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 		
 		deviceCodes.add( new XFSDeviceCode( "WFSVDMCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_VDM"		, "9"));
-		
+
+        getDeviceCommandCategory( deviceCodes, 901, 903, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 901, 905, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 901, 905, EVENTS, context);
+
 		deviceCodes.add( new XFSDeviceCode("", ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSVDMSTATUS.fwDevice"			, ""));
         deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"					, "0"));
@@ -5062,13 +5126,17 @@ public class XFSCodes {
 		return deviceCodes;
 	}
 	
-	public static ArrayList<XFSDeviceCode> getBarCodeData( ) {
+	public static ArrayList<XFSDeviceCode> getBarCodeData( Context context) {
 		
 		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 		
 		deviceCodes.add( new XFSDeviceCode( "WFSBCRCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_BCR"		, "15"));
-		
+
+        getDeviceCommandCategory( deviceCodes, 1501, 1502, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 1501, 1505, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 1501, 1502, EVENTS, context);
+
 		deviceCodes.add( new XFSDeviceCode("", ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSVDMSTATUS.fwDevice"			, ""));
         deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"			, "0"));
@@ -5171,13 +5239,17 @@ public class XFSCodes {
 		return deviceCodes;
 	}
 	
-	public static ArrayList<XFSDeviceCode> getDepositData( ) {
+	public static ArrayList<XFSDeviceCode> getDepositData( Context context) {
 		
 		ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 		
 		deviceCodes.add( new XFSDeviceCode( "WFSDEPCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_DEP"		, "6"));
-		
+
+        getDeviceCommandCategory( deviceCodes, 601, 602, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 601, 610, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 601, 613, EVENTS, context);
+
 		deviceCodes.add( new XFSDeviceCode("", ""));
 		deviceCodes.add( new XFSDeviceCode( "WFSDEPSTATUS.fwDevice"			, ""));
         deviceCodes.add( new XFSDeviceCode( "\tDEVONLINE"			, "0"));
@@ -5309,12 +5381,16 @@ public class XFSCodes {
 		return deviceCodes;
 	}
 
-	public static ArrayList<XFSDeviceCode> getALMData() {
+	public static ArrayList<XFSDeviceCode> getALMData( Context context) {
 
         ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 
         deviceCodes.add( new XFSDeviceCode( "WFSALMCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_ALM"		, "11"));
+
+        getDeviceCommandCategory( deviceCodes, 1101, 1102, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 1101, 1104, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 1101, 1102, EVENTS, context);
 
         deviceCodes.add( new XFSDeviceCode("", ""));
         deviceCodes.add( new XFSDeviceCode( "WFSALMSTATUS.fwDevice"			, ""));
@@ -5345,6 +5421,10 @@ public class XFSCodes {
 
         deviceCodes.add( new XFSDeviceCode( "WFSCAMCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_CAM"		, "10"));
+
+        getDeviceCommandCategory( deviceCodes, 1001, 1002, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 1001, 1004, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 1001, 1002, EVENTS, context);
 
         deviceCodes.add( new XFSDeviceCode("", ""));
         deviceCodes.add( new XFSDeviceCode( "WFSALMSTATUS.fwDevice"			, ""));
@@ -5416,12 +5496,16 @@ public class XFSCodes {
         return deviceCodes;
     }
 
-    public static ArrayList<XFSDeviceCode> getCEUData() {
+    public static ArrayList<XFSDeviceCode> getCEUData( Context context) {
 
         ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 
         deviceCodes.add( new XFSDeviceCode( "WFSCEUCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_CEU"		, "12"));
+
+        getDeviceCommandCategory( deviceCodes, 1201, 1207, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 1201, 1206, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 1201, 1211, EVENTS, context);
 
         deviceCodes.add( new XFSDeviceCode("", ""));
         deviceCodes.add( new XFSDeviceCode( "WFSCEUSTATUS.fwDevice"			, ""));
@@ -5586,12 +5670,16 @@ public class XFSCodes {
         return deviceCodes;
     }
 
-    public static ArrayList<XFSDeviceCode> getCHKData() {
+    public static ArrayList<XFSDeviceCode> getCHKData( Context context) {
 
         ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 
         deviceCodes.add( new XFSDeviceCode( "WFSCHKCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_CHK"		, "5"));
+
+        getDeviceCommandCategory( deviceCodes, 501, 507, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 501, 505, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 501, 509, EVENTS, context);
 
         deviceCodes.add( new XFSDeviceCode("", ""));
         deviceCodes.add( new XFSDeviceCode( "WFSCHKSTATUS.fwDevice"			, ""));
@@ -5744,12 +5832,16 @@ public class XFSCodes {
         return deviceCodes;
     }
 
-    public static ArrayList<XFSDeviceCode> getCRDData() {
+    public static ArrayList<XFSDeviceCode> getCRDData( Context context) {
 
         ArrayList<XFSDeviceCode> deviceCodes = new ArrayList<XFSDeviceCode>();
 
         deviceCodes.add( new XFSDeviceCode( "WFSCRDCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_CRD"		, "14"));
+
+        getDeviceCommandCategory( deviceCodes, 1401, 1403, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 1401, 1408, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 1401, 1407, EVENTS, context);
 
         deviceCodes.add( new XFSDeviceCode("", ""));
         deviceCodes.add( new XFSDeviceCode( "WFSCRDSTATUS.fwDevice"			, ""));
@@ -5858,6 +5950,10 @@ public class XFSCodes {
 
         deviceCodes.add( new XFSDeviceCode( "WFSIPMCAPS.wClass"			, ""));
         deviceCodes.add( new XFSDeviceCode( "WFS_SERVICE_CLASS_IPM"		, "16"));
+
+        getDeviceCommandCategory( deviceCodes, 1601, 1606, CATEGORIES, context);
+        getDeviceCommandCategory( deviceCodes, 1601, 1620, COMMANDS, context);
+        getDeviceCommandCategory( deviceCodes, 1601, 1618, EVENTS, context);
 
         deviceCodes.add( new XFSDeviceCode("", ""));
         deviceCodes.add( new XFSDeviceCode( "WFSIPMSTATUS.fwDevice"			, ""));
@@ -6305,7 +6401,19 @@ public class XFSCodes {
 		deviceCodes.add( new XFSDeviceCode( "\tUSER_EVENTS"				, "2"));
 		deviceCodes.add( new XFSDeviceCode( "\tSYSTEM_EVENTS"			, "4"));
 		deviceCodes.add( new XFSDeviceCode( "\tEXECUTE_EVENTS"			, "8"));
-		
+
+        deviceCodes.add( new XFSDeviceCode("", ""));
+        deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_manager_system_events_ids), ""));
+        deviceCodes.add( new XFSDeviceCode( "\tSYSE_UNDELIVERABLE_MSG"	, "1"));
+        deviceCodes.add( new XFSDeviceCode( "\tSYSE_HARDWARE_ERROR"		, "2"));
+        deviceCodes.add( new XFSDeviceCode( "\tSYSE_VERSION_ERROR"		, "3"));
+        deviceCodes.add( new XFSDeviceCode( "\tSYSE_DEVICE_STATUS"		, "4"));
+        deviceCodes.add( new XFSDeviceCode( "\tSYSE_APP_DISCONNECT"			, "5"));
+        deviceCodes.add( new XFSDeviceCode( "\tSYSE_SOFTWARE_ERROR"			, "6"));
+        deviceCodes.add( new XFSDeviceCode( "\tSYSE_USER_ERROR"			    , "7"));
+        deviceCodes.add( new XFSDeviceCode( "\tSYSE_LOCK_REQUESTED"			, "8"));
+        deviceCodes.add( new XFSDeviceCode( "\tSYSE_FRAUD_ATTEMPT"			    , "9"));
+
 		deviceCodes.add( new XFSDeviceCode("", ""));
         deviceCodes.add( new XFSDeviceCode( context.getString(R.string.devices_manager_trace_level)	, ""));
 		deviceCodes.add( new XFSDeviceCode( "\tWFS_TRACE_API"				, "0x01"));

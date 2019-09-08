@@ -124,6 +124,6 @@ public class MainActivity extends AppCompatActivity {
         TextView result = findViewById( R.id.textView_main_result_text);
         result.setText( element.getErrorCode().isEmpty() ? "No Encontrado" : element.getErrorCode());
         TextView description = findViewById( R.id.textView_main_result_description);
-        description.setText( element.getDescription());
+        description.setText( getString( R.string.devices_all_evento, element.getDescription()));
     }
 }
