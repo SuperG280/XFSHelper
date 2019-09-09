@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">XFSHelper</string>
-    <string name="app_version">Ver. 1.0.0</string>
+    <string name="app_version">v. 1.1.0</string>
     <string name="action_devices">Constantes de Dispositivos</string>
     <string name="action_about">Acerca de</string>
     <string name="main_label_find">Código XFS</string>
