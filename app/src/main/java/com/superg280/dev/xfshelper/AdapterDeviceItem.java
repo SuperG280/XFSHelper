@@ -135,10 +135,12 @@ public class AdapterDeviceItem extends BaseAdapter {
             items.addAll( itemsList);
         } else {
             for( XFSDeviceCode code: itemsList) {
-                if( code.getName().toLowerCase( Locale.getDefault()).contains( charText) ||
-                    code.getValue().toLowerCase( Locale.getDefault()).contains( charText)) {
-                    items.add(code);
-                }
+               if( !code.getValue().isEmpty()) {
+                   if (code.getName().toLowerCase(Locale.getDefault()).contains(charText) ||
+                           code.getValue().toLowerCase(Locale.getDefault()).contains(charText)) {
+                       items.add(code);
+                   }
+               }
             }
         }
         notifyDataSetChanged();
